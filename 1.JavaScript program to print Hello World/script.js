@@ -51,3 +51,6 @@ console.log(ageSarah >= 18);
 let X, Y;
 X = Y = 25 - 10 - 5;
 console.log(X, Y);
+
+const averageAge = ageJonas + ageSarah / 2;
+console.log(ageJonas, ageSarah, averageAge);
