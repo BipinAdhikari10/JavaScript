@@ -37,18 +37,40 @@
 // const hasGoodVision = false;
 // console.log(hasDriversLicense && hasGoodVision);
 // console.log(hasDriversLicense || hasGoodVision);
-// console.log(!hasDriversLicense);
+// // console.log(!hasDriversLicense);
 
-const scoreDolphins = (97 + 112 + 80) / 3;
-const scoreKolas = (109 + 100 + 110) / 3;
-console.log(scoreDolphins, scoreKolas);
+// const scoreDolphins = (97 + 112 + 80) / 3;
+// const scoreKolas = (109 + 100 + 110) / 3;
+// console.log(scoreDolphins, scoreKolas);
 
-if (scoreDolphins > scoreKolas) {
-  console.log("Dolphins wins the tropjy");
-} else if (scoreKolas > scoreDolphins) {
-  console.log("Kolas wins the trophy");
-} else if (scoreDolphins === scoreKolas) {
-  console.log("Both wint the trophy");
-} else {
-  console.log("No won the trophy");
-}
+// if (scoreDolphins > scoreKolas) {
+//   console.log("Dolphins wins the tropjy");
+// } else if (scoreKolas > scoreDolphins) {
+//   console.log("Kolas wins the trophy");
+// } else if (scoreDolphins === scoreKolas) {
+//   console.log("Both wint the trophy");
+// } else {
+//   console.log("No won the trophy");
+// }
+
+// const day = "Monday";
+// switch (day) {
+//   case "Monday":
+//     console.log("Plan course structure");
+//     console.log("go to coding meetup");
+//   // break;
+//   case "tuesday":
+//     console.log("Prepare theory videos");
+//     break;
+// }
+
+// const me = "Jonas";
+// console.log(`I'm ${2036 - 2004} years old ${me}`);
+
+const age = 10;
+// age >= 18
+//   ? console.log("I like to drink wine")
+//   : console.log("I like to drink water");
+
+const drink = age >= 18 ? "Wine" : "Water";
+console.log(drink);
