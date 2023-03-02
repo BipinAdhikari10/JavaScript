@@ -36,26 +36,55 @@
 // const calcRectArea5 = (width, height) => width * height;
 // console.log(`The area is ${area}`);
 
-function volumeOfcuboid(Length, breadth, height) {
-  return length * breadth * height;
+// function volumeOfcuboid(length, breadth, height) {
+//   return length * breadth * height;
+// }
+
+// const volume = volumeOfcuboid(10, 40, 50);
+// console.log(`The volume of cuboid is ${volume}`);
+
+// //Function Expression
+
+// const volumeOfcuboid2 = function (length, breadth, height) {
+//   return length * breadth * height;
+// };
+
+// //Pointing the function to another variable
+// const volumeOfcuboid3 = volumeOfcuboid2;
+
+// // calling the function:
+// const volume5 = volumeOfcuboid3(10, 20, 30);
+// console.log(`The volume of cuboid is ${volume5}`);
+
+// //Arrow function
+
+// //Declarring the arrow function
+// const volumeOfcuboid5 = (length, breadth, height) => length * breadth * height;
+
+// // Pointing the functions:
+// const volumeOfcuboid6 = volumeOfcuboid5;
+
+// //  Calling the function:
+// const volume2 = volumeOfcuboid6(20, 8, 9);
+// console.log(`The volume of cuboid is ${volume2}`);
+
+function calculateAreaDeclaration(radius) {
+  const area = Math.PI * radius * radius;
+  return area;
 }
-const length = 10;
-const breadth = 20;
-const height = 30;
 
-const volume = volumeOfcuboid(length, breadth, height);
-console.log(`The volume of cuboid is ${volume}`);
+console.log(calculateAreaDeclaration(5));
 
-//Function Expression
+function calculateAreaDeclaration(radius) {
+  const area = Math.PI * radius * radius;
+  return area;
+}
 
-const volumeOfcuboid2 = function (length, breadth, height) {
-  return length * breadth * height;
+console.log(calculateAreaDeclaration(5));
+
+const calculateAreaArrow = (radius) => {
+  const area = Math.PI * radius * radius;
+  return area;
 };
-const volumeOfcuboid3 = volumeOfcuboid2;
-const volumeOfcuboid4 = volumeOfcuboid3(10, 20, 30);
-console.log(`The volume of cuboid is ${volume}`);
 
-//Arrow function
-
-const volumeOfcuboid5 = (Length, breadth, height) => length * breadth * height;
-console.log(`The volume of cuboid is ${volume}`);
+console.log(calculateAreaArrow(5));
