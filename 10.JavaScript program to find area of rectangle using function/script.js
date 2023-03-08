@@ -19,3 +19,10 @@ const areaOfrect6 = areaOfrect5;
 
 const areaOfrect7 = areaOfrect6(20, 10);
 console.log(`The area of rectangle is ${areaOfrect7}`);
+
+const calcaverage=(a,b,c) =>a+b+c/3;
+
+const calcaverage2=calcaverage;
+const calcaverage3=calcaverage2(4,5,6);
+
+console.log
