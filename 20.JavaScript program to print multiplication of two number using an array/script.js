@@ -1,18 +1,49 @@
-// Ask the user for two numbers
-const num1 = parseInt(prompt("Enter the first number: "));
-const num2 = parseInt(prompt("Enter the second number: "));
+/*let js = "amazing";
 
-// Create an empty array to hold the multiplication table
-const table = [];
+if ("js===amazing") alert("javascript is fun");
 
-// Use a loop to calculate and store the multiplication table in the array
-for (let i = 1; i <= 10; i++) {
-  const product = i * num1 * num2;
-  table.push(product);
-}
+console.log(48 + 23 - 10);
 
-// Print the multiplication table to the console
-console.log("Multiplication table for " + num1 + " and " + num2 + ":");
-for (let i = 1; i <= 10; i++) {
-  console.log(num1 + " x " + num2 + " x " + i + " = " + table[i - 1]);
-}
+let firstName = "Bipin";
+console.log(firstName);
+console.log(firstName);
+console.log(firstName);
+console.log(firstName);
+console.log(firstName);
+console.log(firstName);
+*/
+
+// let javascriptisFun = true;
+// console.log(javascriptisFun);
+
+// console.log(typeof true);
+
+// console.log(typeof javascriptisFun);
+
+// console.log(typeof "Bipin");
+
+// console.log(typeof 23);
+
+// const now = 2079;
+// const ageBipin = now - 2058;
+// const ageKeshab = now - 2019;
+// console.log(ageBipin, ageKeshab);
+
+// let x = 10 + 5;
+// x += 10;
+// x *= 4;
+// console.log(x);
+
+const massMark = 78;
+const heightMark = 1.69;
+
+const massJohn = 92;
+const heightJohn = 1.95;
+
+const BMIMark = massMark / heightMark ** 2;
+
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+
+const markHigherBMI = BMIMark > BMIJohn;
+
+console.log(BMIMark, BMIJohn, markHigherBMI);
