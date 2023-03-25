@@ -1,3 +1,40 @@
-body {
-  background-color: aqua;
+/* Universal selector */
+* {
+  margin: 0;
+  padding: 0;
 }
+
+/* Heading class selector */
+.heading {
+  /* height: 99vh; */
+  height: auto;
+  background-color: #e6ffe6;
+  color: #000000;
+}
+/* Paragraph selector */
+p {
+  font-size: 20px;
+}
+/* Attribute selector */
+a {
+  font-size: 30px;
+  color: green;
+  text-decoration: none;
+}
+/* Image selector */
+img {
+  height: 500px;
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+/* Books class selector */
+.books {
+  font-size: 25px;
+  margin: 10px;
+  padding: 20px;
+}
+/* h1 {
+    font-size: 50px;
+    color: #000;
+  } */
