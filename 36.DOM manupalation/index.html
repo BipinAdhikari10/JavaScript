@@ -28,10 +28,9 @@
         <label for="zip">Zip Code:</label>
         <input type="text" id="zip" name="zip" required />
 
-        <button type="submit">Submit</button>
+        <button type="submit" id="btn-submit">Submit</button>
       </form>
     </div>
-
     <div class="table-container">
       <h2>Submitted Data</h2>
       <table id="dataTable">
@@ -46,11 +45,18 @@
           </tr>
         </thead>
         <tbody>
-          <!-- Rows will be added here -->
+          <tr>
+            <td id="table-name">Bipin</td>
+            <td id="table-address">Galyang</td>
+            <td id="table-number">9849118922</td>
+            <td id="table-email">adhikari@gmail.com</td>
+            <td id="table-password">*********</td>
+            <td id="table-zip">1254888</td>
+          </tr>
         </tbody>
       </table>
     </div>
 
-    <script src="script.js" defer></script>
+    <script src="form.js" defer></script>
   </body>
 </html>
