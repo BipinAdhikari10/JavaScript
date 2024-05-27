@@ -4,10 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Dom Manupulation</title>
   </head>
   <body>
-    <h1>Hello WOrld</h1>
+    <div class="form-container">
+      <label for="address">Address:</label>
+      <input type="text" id="address" placeholder="Enter your address" />
+      <div>
+        <button class="btn" id="submit-btn">Submit</button>
+        <p class="text-para" id="text">Text will be here</p>
+      </div>
+    </div>
   </body>
 </html>
