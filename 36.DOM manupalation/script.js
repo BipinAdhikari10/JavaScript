@@ -1,87 +1,41 @@
-// let submitButton1 = document.getElementsByClassName("btn")[0];
-// console.log(submitButton1);
+let inputNameTag = document.getElementById("name");
+let inputAddressTag = document.getElementById("address");
+let inputNumberTag = document.getElementById("phone");
+let inputEmailTag = document.getElementById("email");
+let inputPasswordTag = document.getElementById("password");
+let inputZipCodeTag = document.getElementById("zip");
 
-// let submitButton2 = document.getElementsByTagName("button")[0];
-// console.log(submitButton2);
+let submitButton = document.getElementById("btn-submit");
 
-// let paragraph = document.getElementById("text");
-// console.log(paragraph);
+submitButton.addEventListener("click", function (event) {
+  event.preventDefault;
 
-// let paragraph1 = document.getElementsByClassName("text-para")[0];
-// console.log(paragraph1);
+  // getting the value
 
-// let paragaraph2 = document.getElementsByTagName("p")[0];
-// console.log(paragaraph2);
+  let enteredName = inputNameTag.value;
+  let enteredAddress = inputAddressTag.value;
+  let enteredPhone = inputNumberTag.value;
+  let enteredEmail = inputEmailTag.value;
+  let enteredPassword = inputPasswordTag.value;
+  let enteredZipCode = inputZipCodeTag.value;
 
-// let submitButton = document.getElementById("submit-btn");
-// submitButton.addEventListener("click", function () {
-//   let inputValue = document.getElementById("address").value;
+  //   Reset the value
 
-//   let paragraph = document.getElementById("text");
-//   paragraph.innerText = inputValue;
-// });
+  inputNameTag.value = "";
+  inputAddressTag.value = "";
+  inputNumberTag.value = "";
+  inputEmailTag.value = "";
+  inputPasswordTag.value = "";
+  inputZipCodeTag.value = "";
 
-// let submitButton = document.getElementById("submit-btn");
-// submitButton.addEventListener("click", function () {
-//   let inputValue = document.getElementById("address").value;
-//   let paragraph = document.getElementById("text");
-//   paragraph.innerText = inputValue;
-// });
+  // display the data in table
 
-// let submitButton = document.getElementById("submit-btn");
-// submitButton.addEventListener("click", function () {
-//   let inputValue = document.getElementById("address").value;
-//   let paragraph = document.getElementById("text");
-//   paragraph.innerText = inputValue;
-// });
-// let submitButton = document.getElementById("submit-btn");
-// // console.log(submitButton
-// submitButton.addEventListener("click", function () {
-//   let inputValue = document.getElementById("address").value;
-//   //   console.log(inputValue);
-//   let paragraph = document.getElementById("text");
-//   paragraph.innerText = inputValue;
-// });
+  document.getElementById("table-name").innerText = enteredName;
+  document.getElementById("table-address").innerText = enteredAddress;
 
-// let submitButton = document.getElementById("submit-btn");
-// submitButton.addEventListener("click", function () {
-//   let inputValue = document.getElementById("address").value;
-//   let paragraph = document.getElementById("text");
-//   paragraph.innerText = inputValue;
-// });
+  document.getElementById("table-number").innerText = enteredPhone;
+  document.getElementById("table-email").innerText = enteredEmail;
 
-// let submitButton = document.getElementById("submit-btn");
-// submitButton.addEventListener("click", function () {
-//   let inputValue = document.getElementById("address").value;
-//   let paragraph = document.getElementById("text");
-//   paragraph.innerText = inputValue;
-// });
-
-let submitButton = document.getElementById("submit-btn");
-submitButton.addEventListener("click", function () {
-  let inputValue = document.getElementById("address").value;
-  let paragraph = document.getElementById("text");
-  paragraph.innerText = inputValue;
-});
-
-let submitButton1 = document.getElementById("submit-btn");
-
-submitButton1.addEventListener("click", function () {
-  let input = document.getElementById("name").value;
-  let para = document.getElementById("text-paragraph");
-  para.innerText = input;
-});
-
-let clickButton = document.getElementById("submit-btn");
-clickButton.addEventListener("click", function () {
-  let enterValue = document.getElementById("email").value;
-  let words = document.getElementById("words-text");
-  words.innerText = enterValue;
-});
-
-let clickNumber = document.getElementById("submit-btn");
-clickNumber.addEventListener("click", function () {
-  let enterNumber = document.getElementById("number").value;
-  let number = document.getElementById("mobile-numbers");
-  number.innerText = enterNumber;
+  document.getElementById("table-password").innerText = enteredPassword;
+  document.getElementById("table-zip").innerText = enteredZipCode;
 });
