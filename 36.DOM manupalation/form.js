@@ -15,6 +15,7 @@
 
 //   document.getElementById("table-name").innerText = enteredTagName;
 // });
+let tableBody = document.getElementById("table-body");
 
 let registrationForm = document.getElementById("registrationForm");
 let submittedData = [];
@@ -33,30 +34,42 @@ registrationForm.addEventListener("submit", (event) => {
   };
   submittedData.push(formData);
 
-  console.log("formData", formData);
-
-  console.log("submitted Data", submittedData);
-
   //   reset the value
-
-  document.getElementById("name").value = "";
-  document.getElementById("address").value = "";
-  document.getElementById("phone").value = "";
-
-  document.getElementById("email").value = "bipin@gmail.com";
-  document.getElementById("password").value = "";
-  document.getElementById("zip").value = "";
+  // registrationForm.reset();
 
   //   display the data in table
 
-  document.getElementById("table-name").innerText = submittedData[1].name;
-  document.getElementById("table-address").innerText = submittedData[1].address;
-  document.getElementById("table-phone").innerText = submittedData[1].phone;
-  document.getElementById("table-email").innerText = submittedData[1].email;
-  document.getElementById("table-password").innerText =
-    submittedData[0].password;
-  document.getElementById("table-zip").innerText = submittedData[0].zip;
+  addDataToTable(formData);
+
+  //   document.getElementById("table-name").innerText = submittedData[1].name;
+  //   document.getElementById("table-address").innerText = submittedData[1].address;
+  //   document.getElementById("table-phone").innerText = submittedData[1].phone;
+  //   document.getElementById("table-email").innerText = submittedData[1].email;
+  //   document.getElementById("table-password").innerText =
+  //     submittedData[0].password;
+  //   document.getElementById("table-zip").innerText = submittedData[0].zip;
 });
+
+function addDataToTable(formData) {
+  let tr = document.createElement("tr");
+  for (let key in formData) {
+    let td = document.createElement("td");
+    let text = document.createTextNode(formData[key]);
+    td.appendChild(text);
+    tr.appendChild(td);
+  }
+
+  tableBody.appendChild(tr);
+}
+// function addDataToTable(formData) {
+//   for (let key in formData) {
+//     let td = document.createElement("td");
+//     let text = document.createTextNode(formData[key]);
+//     td.appendChild(text);
+//     tr.appendChild(td);
+//   }
+// }
+// tableBody.appendChild(tr);
 
 // const child = document.createElement("p");
 
@@ -70,9 +83,9 @@ registrationForm.addEventListener("submit", (event) => {
 // console.log(parent);
 // console.log(child);
 
-{
-  /* <p>This is paragraph</p> */
-}
+// {
+//   /* <p>This is paragraph</p> */
+// }
 
 // let paragraph = document.createElement("p");
 // let text = document.createTextNode("This is me");
@@ -117,15 +130,43 @@ registrationForm.addEventListener("submit", (event) => {
 // let tableContainer = document.getElementById("table-container");
 // tableContainer.appendChild(ul);
 
-let ul = document.createElement("ul");
-ul.setAttribute("class", "links");
-ul.setAttribute("id", "link");
-console.log(ul);
-let li = document.createElement("li");
-let text = document.createTextNode("dog");
-li.appendChild(text);
+// let ul = document.createElement("ul");
+// ul.setAttribute("class", "links");
+// ul.setAttribute("id", "links");
+// console.log(ul);
+// let li = document.createElement("li");
+// let text = document.createTextNode("dog");
+// li.appendChild(text);
 
+// ul.appendChild(li);
+
+// let tableContainer = document.getElementById("table-container");
+// tableContainer.appendChild(ul);
+
+// let ul = document.createElement("ul");
+// ul.setAttribute("class", "links");
+// ul.setAttribute("id", "links");
+// console.log(ul);
+
+// let li = document.createElement("li");
+// // console.log(li);
+// let text = document.createTextNode("Bipin");
+// li.appendChild(text);
+// ul.appendChild(li);
+
+// let tableContainer = document.getElementById("table-container");
+// tableContainer.appendChild(ul);
+
+let ul = document.createElement("ul");
+// console.log(ul);
+ul.setAttribute("class", "links");
+ul.setAttribute("id", "links");
+
+let li = document.createElement("li");
+// console.log(li);
+let text = createTextNode("Bipin");
+li.appendChild(text);
 ul.appendChild(li);
 
-let tableContainer = document.getElementById("table-container");
+let tableContainer = document.getElementById("table-conatainer");
 tableContainer.appendChild(ul);
