@@ -22,6 +22,8 @@ registrationForm.addEventListener("submit", (event) => {
 
   //   display the data in table
   addDataToTable(formData);
+
+
   //   reset the value
   // registrationForm.reset();
 });

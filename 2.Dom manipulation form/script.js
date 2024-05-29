@@ -1,7 +1,6 @@
 let registrationForm = document.getElementById("registrationForm");
-console.log(registrationForm);
+
 let tableBody = document.getElementById("table-body");
-console.log(tableBody);
 
 let submittedData = [];
 
