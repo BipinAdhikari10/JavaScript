@@ -1,5 +1,4 @@
 let registrationForm = document.getElementById("registrationForm");
-
 let tableBody = document.getElementById("table-body");
 
 let submittedData = [];
@@ -10,7 +9,6 @@ registrationForm.addEventListener("submit", (event) => {
 
   formData = {
     name: document.getElementById("name").value,
-
     address: document.getElementById("address").value,
     phone: document.getElementById("phone").value,
     email: document.getElementById("email").value,

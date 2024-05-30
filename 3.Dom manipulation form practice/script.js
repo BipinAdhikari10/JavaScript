@@ -15,6 +15,7 @@ contactForm.addEventListener("submit", (event) => {
   submittedData.push(submitForm);
 
   //   adding data to table
+  contactForm.reset();
   addToTable(submitForm);
 });
 function addToTable(submitForm) {
