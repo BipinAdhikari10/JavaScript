@@ -3,21 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Student Information Form</title>
   </head>
   <body>
-    <ul>
-      <li>Hello</li>
-      <li>Hi</li>
-      <li>k xa</li>
-    </ul>
+    <h2>Student Information</h2>
+    <form action="/submit_action" method="POST">
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname" required /><br /><br />
 
-    <script>
-      let arr = ["hello", "hi", "kxa"];
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname" required /><br /><br />
 
-      for (item of arr) {
-        console.log(arr);
-      }
-    </script>
+      <label for="gender">Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other" />
+      <label for="other">Other</label><br /><br />
+
+      <label for="subjects">Subjects:</label>
+      <input type="checkbox" id="c" name="subject" value="C" />
+      <label for="c">C</label>
+      <input type="checkbox" id="java" name="subject" value="Java" />
+      <label for="java">Java</label>
+      <input type="checkbox" id="php" name="subject" value="PHP" />
+      <label for="php">PHP</label><br /><br />
+
+      <label for="comment">Comment:</label><br />
+      <textarea id="comment" name="comment" rows="4" cols="50"></textarea
+      ><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
   </body>
 </html>
