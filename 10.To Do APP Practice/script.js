@@ -1,49 +1,79 @@
-let inputTagName = document.getElementById("username");
-let userButton = document.getElementById("addUser");
-tableBody = document.getElementById("records");
-tableBody.innerHTML = "";
+let personalForm = document.getElementById("personal-form");
+let inputNameTag = document.getElementById("name");
+let inputAddressTag = document.getElementById("address");
+let inputPhoneTag = document.getElementById("phone");
+let inputMessageTag = document.getElementById("message");
+let btnSubmit = document.getElementById("submit");
+let cardContainer = document.getElementsByClassName("card-container")[0];
+console.log(cardContainer);
 
-let submittedData = [];
-let edit_index = null;
+cardContainer.innerHTML = "";
 
-userButton.addEventListener("click", () => {
-  let enteredName = inputTagName.value;
+let personalInfoArray = [];
 
-  let submitForm = {
+personalForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log("submitted");
+  let enteredName = inputNameTag.value;
+  let enteredAddress = inputAddressTag.value;
+  let enteredPhone = inputPhoneTag.value;
+  let enteredMessage = inputMessageTag.value;
+
+  let formData = {
     name: enteredName,
+    address: enteredAddress,
+    phone: enteredPhone,
+    message: enteredMessage,
   };
-  if (edit_index != null) {
-    submittedData.splice(edit_index, 1, submitForm);
-    edit_index = null;
-  } else {
-    submittedData.push(submitForm);
-  }
-  inputTagName.value = "";
-  userButton.innerText = "Add Text";
-  tableDisplay();
+  personalInfoArray.push(formData);
+  console.log(personalInfoArray);
+
+  personalForm.reset();
+
+  displayCard();
 });
 
-function tableDisplay() {
-  let html = "";
-  submittedData.forEach(function (user, index) {
-    html += `  <tr>
-        <td>${index + 1}</td>
-        <td>${user.name}</td>
-        <td>
-          <i class="btn text-white fa fa-edit btn-info mx-2" onclick='editInformation(${index})'></i>
-          <i class="btn btn-danger text-white fa fa-trash" onclick='deleteInformation(${index})'></i>
-        </td>
-      </tr>`;
+function displayCard() {
+  html = "";
+  personalInfoArray.forEach(function (user, index) {
+    html += `<div class="card" id="card" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">My Message</h5>
+      <p class="card-text">${user.message}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Name: ${user.name}</li>
+      <li class="list-group-item">Adddress: ${user.address}</li>
+      <li class="list-group-item">Phone Number: ${user.phone}</li>
+      <li class="button-container d-flex p-2" style="gap: 10px">
+        <button class="btn btn-primary w-50" onclick='editInformation(${index})'>Edit</button>
+        <button class="btn btn-danger w-50" onclick='deleteInformation(${index})'>Delete</button>
+      </li>
+    </ul>
+  </div>`;
   });
-  tableBody.innerHTML = html;
+
+  cardContainer.innerHTML = html;
 }
+
 function editInformation(index) {
-  edit_index = index;
-  inputTagName.value = submittedData[index].name;
-  userButton.innerText = "Save edited data";
+  console.log(`I am  editing this ${index} card`);
 }
 function deleteInformation(index) {
-  submittedData.splice(index, 1);
-  tableDisplay();
+  console.log(`I am deleting this ${index} card`);
 }
-ss;
+// let html=`<div class="card id="card" style="width: 18rem">
+// <div class="card-body">
+//   <h5 class="card-title">My Message</h5>
+//   <p class="card-text">This is my message</p>
+// </div>
+// <ul class="list-group list-group-flush">
+//   <li class="list-group-item">Name: Shiva Adhikari</li>
+//   <li class="list-group-item">Adddress: Jimuha</li>
+//   <li class="list-group-item">Phone Number: 9864159195</li>
+//   <li class="button-container d-flex p-2" style="gap: 10px">
+//     <button class="btn btn-primary w-50">Edit</button>
+//     <button class="btn btn-danger w-50">Delete</button>
+//   </li>
+// </ul>
+// </div>`
