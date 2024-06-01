@@ -10,6 +10,7 @@ console.log(cardContainer);
 cardContainer.innerHTML = "";
 
 let personalFormArray = [];
+let edit_index = null;
 
 personalForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -24,7 +25,13 @@ personalForm.addEventListener("submit", (event) => {
     phone: enteredPhone,
     message: enteredMessage,
   };
-  personalFormArray.push(submitForm);
+  if (edit_index != null) {
+    personalFormArray.splice(edit_index, 1).value;
+    edit_index = null;
+  } else {
+    personalFormArray.push(submitForm);
+  }
+  btnSubmit.innerText = "Submit";
 
   personalForm.reset();
   displayCard();
@@ -51,9 +58,14 @@ function displayCard() {
   cardContainer.innerHTML = html;
 }
 function editInformation(index) {
-  console.log(`I am  editing this ${index} card`);
+  edit_index = index;
+  inputNameTag.value = personalFormArray[index].value;
+  inputAddressTag.value = personalFormArray[index].value;
+  inputPhoneTag.value = personalFormArray[index].value;
+  inputMessageTag.value = personalFormArray[index].value;
+  btnSubmit.innerText = "Edit data";
 }
 function deleteInformation(index) {
-  console.log(`I am deleting this ${index} card`);
+  personalFormArray.splice(index, 1);
   displayCard();
 }

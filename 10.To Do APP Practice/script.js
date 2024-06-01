@@ -13,7 +13,6 @@ let personalInfoArray = [];
 
 personalForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log("submitted");
   let enteredName = inputNameTag.value;
   let enteredAddress = inputAddressTag.value;
   let enteredPhone = inputPhoneTag.value;

@@ -43,7 +43,6 @@ function displayTable() {
 
 function editInformation(index) {
   edit_index = index;
-
   inputTagName.value = submittedData[index].name;
   userButton.innerText = "Save edited data";
 }
