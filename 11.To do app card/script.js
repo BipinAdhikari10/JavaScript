@@ -24,9 +24,11 @@ personalForm.addEventListener("submit", (event) => {
     address: enteredAddress,
     phone: enteredPhone,
     message: enteredMessage,
+    value: "THis is value",
   };
   if (edit_index != null) {
-    personalFormArray.splice(edit_index, 1).value;
+    console.log(edit_index);
+    personalFormArray.splice(edit_index, 1, submitForm);
     edit_index = null;
   } else {
     personalFormArray.push(submitForm);
@@ -59,10 +61,10 @@ function displayCard() {
 }
 function editInformation(index) {
   edit_index = index;
-  inputNameTag.value = personalFormArray[index].value;
-  inputAddressTag.value = personalFormArray[index].value;
-  inputPhoneTag.value = personalFormArray[index].value;
-  inputMessageTag.value = personalFormArray[index].value;
+  inputNameTag.value = personalFormArray[index].name;
+  inputAddressTag.value = personalFormArray[index].address;
+  inputPhoneTag.value = personalFormArray[index].phone;
+  inputMessageTag.value = personalFormArray[index].message;
   btnSubmit.innerText = "Edit data";
 }
 function deleteInformation(index) {

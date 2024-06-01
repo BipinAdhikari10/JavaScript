@@ -81,6 +81,7 @@ function displayTable() {
     html += `   <tr>
         <td>${index + 1}</td>
         <td>${user.name}</td>
+        
         <td>
           <i class="btn text-white fa fa-edit btn-info mx-2" onclick='editInformation(${index})'></i>
           <i class="btn btn-danger text-white fa fa-trash" onclick='deleteInformation(${index})'></i>
