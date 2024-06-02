@@ -1,3 +1,53 @@
+// // let inputTagName = document.getElementById("username");
+// // let userButton = document.getElementById("addUser");
+// // let tableBody = document.getElementById("records");
+
+// // tableBody.innerHTML = "";
+
+// // let submittedData = [];
+
+// // let edit_index = null;
+
+// // userButton.addEventListener("click", () => {
+// //   let enteredName = inputTagName.value;
+
+// //   let submitForm = {
+// //     name: enteredName,
+// //   };
+// //   if (edit_index != null) {
+// //     submittedData.splice(edit_index, 1, submitForm);
+// //     edit_index = null;
+// //   } else {
+// //     submittedData.push(submitForm);
+// //   }
+// //   inputTagName.value = "";
+// //   userButton.innerText = "Add User";
+// //   displayTable();
+// // });
+// // function displayTable() {
+// //   html = "";
+// //   submittedData.forEach(function (user, index) {
+// //     html += ` <tr>
+// //         <td>${index}</td>
+// //         <td>${user.name}</td>
+// //         <td>
+// //           <i class="btn text-white fa fa-edit btn-info mx-2" onclick='editInformation (${index})'></i>
+// //           <i class="btn btn-danger text-white fa fa-trash"onclick= 'deleteInformation (${index})'></i>
+// //         </td>
+// //       </tr>`;
+// //   });
+// //   tableBody.innerHTML = html;
+// // }
+// // function editInformation(index) {
+// //   edit_index = index;
+// //   inputTagName.value = submittedData[index].name;
+// //   userButton.innerText = "Save edited data";
+// // }
+// // function deleteInformation(index) {
+// //   submittedData.splice(index, 1);
+// //   displayTable();
+// // }
+
 // let inputTagName = document.getElementById("username");
 // let userButton = document.getElementById("addUser");
 // let tableBody = document.getElementById("records");
@@ -10,94 +60,152 @@
 
 // userButton.addEventListener("click", () => {
 //   let enteredName = inputTagName.value;
-
+//   console.log("enteredName", enteredName);
 //   let submitForm = {
 //     name: enteredName,
 //   };
+//   console.log("submitForm", submitForm);
 //   if (edit_index != null) {
 //     submittedData.splice(edit_index, 1, submitForm);
 //     edit_index = null;
 //   } else {
 //     submittedData.push(submitForm);
+//     console.log("SubmittedDataArray", submittedData);
 //   }
 //   inputTagName.value = "";
 //   userButton.innerText = "Add User";
 //   displayTable();
 // });
+
 // function displayTable() {
-//   html = "";
+//   let html = "";
+
 //   submittedData.forEach(function (user, index) {
-//     html += ` <tr>
-//         <td>${index}</td>
+//     html += `   <tr>
+//         <td>${index + 1}</td>
 //         <td>${user.name}</td>
+
 //         <td>
-//           <i class="btn text-white fa fa-edit btn-info mx-2" onclick='editInformation (${index})'></i>
-//           <i class="btn btn-danger text-white fa fa-trash"onclick= 'deleteInformation (${index})'></i>
+//           <i class="btn text-white fa fa-edit btn-info mx-2"  onclick='editInformation(${index})'>${index}</i>
+//           <i class="btn btn-danger text-white fa fa-trash"onclick='deleteInformation(${index})'> ${index} </i>
 //         </td>
 //       </tr>`;
 //   });
+//   console.log(html);
 //   tableBody.innerHTML = html;
 // }
+
 // function editInformation(index) {
 //   edit_index = index;
 //   inputTagName.value = submittedData[index].name;
 //   userButton.innerText = "Save edited data";
 // }
+
 // function deleteInformation(index) {
 //   submittedData.splice(index, 1);
 //   displayTable();
 // }
 
-let inputTagName = document.getElementById("username");
-let userButton = document.getElementById("addUser");
-let tableBody = document.getElementById("records");
+// let arr = [{ name: "Shiva", suranme: "bipin", height: "Ram" }];
+// console.log(arr[0].name);
 
-tableBody.innerHTML = "";
+// let obj = { name: "Shiva", surname: "Adhikari", height: 3 };
+// console.log(obj.surname);
 
-let submittedData = [];
+let bipinInfo = [
+  {
+    name: "Bipin",
+    surname: "Adhikari",
+    school: ["Ginchaur", { class: [2, 3, 4] }, "Galkot", { class: [5, 6] }],
+    friends: [
+      { name: "Keshab", country: "Japan" },
+      {
+        name: "Naran",
+        country: "USA",
+      },
+    ],
+  },
+];
+console.log(bipinInfo[0].friends.length);
 
-let edit_index = null;
+// console.log(
+//   `I am ${bipinInfo[0].name} ${bipinInfo[0].surname}. I have studied in ${bipinInfo[0].school[0]} and ${bipinInfo[0].school[2]}.
+//   In ${bipinInfo[0].school[0]},I studied in ${bipinInfo[0].school[1].class[0]},${bipinInfo[0].school[1].class[1]} and ${bipinInfo[0].school[1].class[2]}
+//   and in ${bipinInfo[0].school[2]} I studied in ${bipinInfo[0].school[3].class[0]} and ${bipinInfo[0].school[3].class[1]} class. I have
+//    ${bipinInfo[0].friends.length}  friends
+//   and their name are ${bipinInfo[0].friends[0].name} and ${bipinInfo[0].friends[1].name}.  lives in ${bipinInfo[0].friends[1].country}`
+// );
 
-userButton.addEventListener("click", () => {
-  let enteredName = inputTagName.value;
+const Info = [
+  {
+    country: "Nepal",
+    Religion: [
+      { religion: "Hindu", speak: ["Nepali", [5, 6], "Dashain"] },
+      { religion: "Buddhist", speak: ["Newari", [10, 15], "Buddha Jayanti"] },
+      {
+        religion: "Christian",
+        speak: [
+          "English",
+          {
+            count: "2%",
+            festival: "Christmas",
+          },
+        ],
+      },
+    ],
+  },
+  "All the best",
+  "Programming",
+  {
+    country: "India",
+    Religion: ["Sikh", "Ishai"],
+    crickters: [
+      {
+        name: "Kholi",
+        Team: ["India", "RCB"],
+        Trophy: [
+          {
+            country: 5,
+            RCB: 0,
+            MI: 0,
+          },
+        ],
+      },
+      {
+        name: "Rohit",
+        Team: ["India", "MI"],
+        Trophy: [
+          {
+            country: 5,
+            RCB: 0,
+            MI: 5,
+          },
+        ],
+      },
+    ],
+  },
+];
+console.log(Info[2]);
 
-  let submitForm = {
-    name: enteredName,
-  };
-  if (edit_index != null) {
-    submittedData.splice(edit_index, 1, submitForm);
-    edit_index = null;
-  } else {
-    submittedData.push(submitForm);
-  }
-  inputTagName.value = "";
-  userButton.innerText = "Add User";
-  displayTable();
-});
+console.log(
+  `I live in ${Info[0].country}.Here, People follow ${Info[0].Religion[0].religion.length} big religion ${Info[0].Religion[0].religion}
+  ,${Info[0].Religion[1].religion} and ${Info[0].Religion[2].religion} are the big religion,${Info[0].Religion[0].religion}'s speak 
+  ${Info[0].Religion[0].speak[0]} and celebrate ${Info[0].Religion[0].speak[1][0]} to ${Info[0].Religion[0].speak[1][1]} festivals.
+  ${Info[0].Religion[0].speak[2]} is the main festival.${Info[0].Religion[1].speak[0]} speaked by ${Info[0].Religion[1].religion} Being
+  ${Info[0].Religion[1].speak[2]}, the biggest festival, they celebrate ${Info[0].Religion[1].speak[1][0]} -${Info[0].Religion[1].speak[1][1]}
+  festivals.${Info[0].Religion[2].religion} is followed by ${Info[0].Religion[2].speak[1].count} of the people and celebrate ${Info[0].Religion[2].speak[1].festival}
+  
 
-function displayTable() {
-  let html = "";
-  submittedData.forEach(function (user, index) {
-    html += `   <tr>
-        <td>${index + 1}</td>
-        <td>${user.name}</td>
-        
-        <td>
-          <i class="btn text-white fa fa-edit btn-info mx-2" onclick='editInformation(${index})'></i>
-          <i class="btn btn-danger text-white fa fa-trash" onclick='deleteInformation(${index})'></i>
-        </td>
-      </tr>`;
-  });
-  tableBody.innerHTML = html;
-}
 
-function editInformation(index) {
-  edit_index = index;
-  inputTagName.value = submittedData[index].name;
-  userButton.innerText = "Save edited data";
-}
+  ${Info[3].crickters[0].name} and  ${Info[3].crickters[1].name} are the biggest player of ${Info[3].country}.
+  Both of them are ${Info[0].Religion[0].religion},They play for ${Info[3].crickters[0].Team[1]},${Info[3].crickters[1].Team[1]}
+and ${Info[3].country}, with ${Info[3].crickters[0].Trophy[0].country} Trophy for India. ${Info[3].crickters[1].name} has
+ ${Info[3].crickters[1].Trophy[0].MI} IPL trophies whereas ${Info[3].crickters[0].name} has ${Info[3].crickters[1].Trophy[0].RCB}
+ because he plays for ${Info[3].crickters[0].Team[1]}
 
-function deleteInformation(index) {
-  submittedData.splice(index, 1);
-  displayTable();
-}
+ Wish me ${Info[1]} for  ${Info[2]}
+ `
+);
+console.log(Info);
+console.log(Info[0].country);
+console.log(Info[0].Religion);
