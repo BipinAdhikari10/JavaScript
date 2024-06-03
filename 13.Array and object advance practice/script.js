@@ -183,7 +183,7 @@ const data = [
   },
 ];
 
-console.log(data[0].Religion[2].speak[1].centers[1].capacity);
+console.log(data[0].Education.secondary);
 
 console.log(`I have the data of ${data[0].Religion[0].speak[1][0]} countries
  ${data[0].country}:
@@ -194,6 +194,10 @@ The major area where ${data[0].Religion[0].religion} is done is ${data[0].Religi
 another language is ${data[0].Religion[1].speak[2]}, major cities are ${data[0].Religion[1].population.major_areas[0]} and ${data[0].Religion[1].population.major_areas[1]},
 percentage covered is ${data[0].Religion[1].population.percentage}, another religion is ${data[0].Religion[2].religion} and major centeres are ${data[0].Religion[1].speak[1][0]} and capacity 
 for ${data[0].Religion[2].speak[1].centers[0].name} is ${data[0].Religion[2].speak[1].centers[0].capacity} and ${data[0].Religion[2].speak[1].centers[1].name} is 
-${data[0].Religion[2].speak[1].centers[1].capacity}
+${data[0].Religion[2].speak[1].centers[1].capacity} Education is of ${data[0].Education.primary},${data[0].Education.higher_secondary}, and 
+
+
+
+${data[0].Education.secondary}
 
 `);
