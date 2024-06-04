@@ -215,6 +215,7 @@ console.log(bipinInfo[0].friends.length);
 const data = [
   {
     country: "Brazil",
+
     Religion: [
       {
         religion: "Catholic",
