@@ -196,8 +196,6 @@ percentage covered is ${data[0].Religion[1].population.percentage}, another reli
 for ${data[0].Religion[2].speak[1].centers[0].name} is ${data[0].Religion[2].speak[1].centers[0].capacity} and ${data[0].Religion[2].speak[1].centers[1].name} is 
 ${data[0].Religion[2].speak[1].centers[1].capacity} Education is of ${data[0].Education.primary},${data[0].Education.higher_secondary}, and 
 
-
-
 ${data[0].Education.secondary}
 
 `);
