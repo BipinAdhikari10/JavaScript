@@ -13,3 +13,8 @@ console.log(a);
 const number = [4, 9, 16, 25];
 const newArr = number.map(Math.sqrt);
 console.log(newArr);
+
+let array1 = [4, 5, 6, 8];
+
+let newArray = array1.filter((ele) => ele % 2 === 0);
+console.log(newArray);

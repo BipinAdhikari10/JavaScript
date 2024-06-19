@@ -1,0 +1,14 @@
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: red;
+  font-size: 25px;
+}
+image {
+  width: 100%;
+}
+img {
+  width: 50%;
+}
