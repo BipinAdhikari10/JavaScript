@@ -11,3 +11,11 @@ console.log(doubleArray);
 const array1 = [2, 4, 6, 8];
 const square = array1.map((ele) => ele * ele);
 console.log(square);
+
+const numbers = [16, 64];
+const num = numbers.map(Math.sqrt);
+console.log(num);
+
+const multiply = [2, 4, 6, 8, 10];
+const multiplyNum = multiply.map((multiply) => multiply * 10);
+console.log(multiplyNum);
