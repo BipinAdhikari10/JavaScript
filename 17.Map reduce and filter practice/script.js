@@ -19,3 +19,7 @@ console.log(num);
 const multiply = [2, 4, 6, 8, 10];
 const multiplyNum = multiply.map((multiply) => multiply * 10);
 console.log(multiplyNum);
+
+const arrays1 = [2, 4, 6, 9, 16];
+const result = arrays1.map((x) => x * 2);
+console.log(result);
