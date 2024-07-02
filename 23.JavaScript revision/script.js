@@ -112,20 +112,71 @@
 // let addition = sum(20, 10);
 // console.log(addition);
 
-const primeNumber = (num) => {
-  if (num <= 1) {
-    return false;
+// const primeNumber = (num) => {
+//   if (num <= 1) {
+//     return false;
+//   }
+//   for (let i = 2; i < Math.sqrt(num); i++) {
+//     if (num % 2 == 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+// const isPrime = primeNumber(11);
+// if (isPrime) {
+//   console.log("This is a prime number");
+// } else {
+//   console.log("This is not a prime number");
+// }
+
+// const addSum = () => {
+//   let sum = 0;
+//   for (let i = 1; i <= 50; i++) {
+//     sum = sum + i;
+//   }
+//   console.log(sum);
+// };
+// addSum();
+
+// const additionNum = () => {
+//   let sum = 0;
+//   for (let i = 1; i <= 5; i++) {
+//     sum = sum + i;
+//   }
+//   return sum;
+// };
+// let result = additionNum();
+// console.log(result);
+
+// // factorial of number
+
+// const factorialNum = (num) => {
+//   let factorial = 1;
+//   for (let i = 1; i <= num; i++) {
+//     factorial = factorial * i;
+//   }
+//   console.log(factorial);
+// };
+// factorialNum(4);
+
+// const multiplyNum = (num) => {
+//   let multiply;
+//   for (let i = 1; i <= 10; i++) {
+//     multiply = num * i;
+//     console.log(`${num}*${i}=${multiply}`);
+//   }
+// };
+// multiplyNum(5);
+
+const fibonanciSeries = (n) => {
+  let a = 0;
+  let b = 1;
+  for (let i = 0; i <= n; i++) {
+    console.log(a);
+    let next = a + b;
+    a = b;
+    b = next;
   }
-  for (let i = 2; i < Math.sqrt(num); i++) {
-    if (num % 2 == 0) {
-      return false;
-    }
-  }
-  return true;
 };
-const isPrime = primeNumber(11);
-if (isPrime) {
-  console.log("This is a prime number");
-} else {
-  console.log("This is not a prime number");
-}
+fibonanciSeries(10);
