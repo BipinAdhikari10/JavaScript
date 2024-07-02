@@ -86,20 +86,46 @@
 
 // function expression
 
-const multiply = function (a, b) {
-  return a * b;
-};
-const result = multiply(3, 3);
-console.log(result);
+// const multiply = function (a, b) {
+//   return a * b;
+// };
+// const result = multiply(3, 3);
+// console.log(result);
 
-const sum = function (x, y) {
-  return x + y;
-};
-const sum1 = sum(20, 2);
-console.log(sum1);
+// const sum = function (x, y) {
+//   return x + y;
+// };
+// const sum1 = sum(20, 2);
+// console.log(sum1);
 
-const divideNum = function (num1, num2) {
-  return num1 / num2;
+// const divideNum = function (num1, num2) {
+//   return num1 / num2;
+// };
+// let divide = divideNum(20, 10);
+// console.log(divide);
+
+// arrow function
+
+// const sum = (a, b) => {
+//   return a + b;
+// };
+// let addition = sum(20, 10);
+// console.log(addition);
+
+const primeNumber = (num) => {
+  if (num <= 1) {
+    return false;
+  }
+  for (let i = 2; i < Math.sqrt(num); i++) {
+    if (num % 2 == 0) {
+      return false;
+    }
+  }
+  return true;
 };
-let divide = divideNum(20, 10);
-console.log(divide);
+const isPrime = primeNumber(11);
+if (isPrime) {
+  console.log("This is a prime number");
+} else {
+  console.log("This is not a prime number");
+}
