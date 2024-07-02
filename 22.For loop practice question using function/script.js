@@ -18,11 +18,20 @@
 // };
 // printEvenNUmber();
 
-function multiplyNum(num) {
-  let product;
-  for (let i = 1; i <= 10; i++) {
-    product = num * i;
-    console.log(`The multiplaction number of ${num}*${i} =${product}`);
+// function multiplyNum(num) {
+//   let product;
+//   for (let i = 1; i <= 10; i++) {
+//     product = num * i;
+//     console.log(`The multiplaction number of ${num}*${i} =${product}`);
+//   }
+// }
+// multiplyNum(5);
+
+const sumOfNum = () => {
+  let sum = 0;
+  for (let i = 1; i <= 50; i++) {
+    sum = sum + i;
   }
-}
-multiplyNum(5);
+  console.log(`The sum of the number is ${sum}`);
+};
+sumOfNum();
