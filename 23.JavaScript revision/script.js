@@ -169,14 +169,35 @@
 // };
 // multiplyNum(5);
 
-const fibonanciSeries = (n) => {
-  let a = 0;
-  let b = 1;
-  for (let i = 0; i <= n; i++) {
-    console.log(a);
-    let next = a + b;
-    a = b;
-    b = next;
+// const fibonanciSeries = (n) => {
+//   let a = 0;
+//   let b = 1;
+//   for (let i = 0; i <= n; i++) {
+//     console.log(a);
+//     let next = a + b;
+//     a = b;
+//     b = next;
+//   }
+// };
+// fibonanciSeries(10);
+
+// const divideNum = (num) => {
+//   for (let i = 1; i <= num; i++) {
+//     if (i % 3 == 0) {
+//       console.log(i);
+//     }
+//   }
+// };
+// divideNum(100);
+
+const oddSum = () => {
+  let sum = 0;
+  for (let i = 1; i <= 100; i++) {
+    if (i % 2 !== 0) {
+      sum = sum + i;
+    }
+    console.log(sum);
   }
 };
-fibonanciSeries(10);
+
+oddSum();
