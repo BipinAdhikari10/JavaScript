@@ -43,26 +43,43 @@
 // }
 // printPrimeNumbers(100);
 
-const findEven = (array) => {
-  let even = [];
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] % 2 === 0) {
-      even.push(array[i]);
-    }
-  }
-  return even;
-};
-const array = [1, 2, 3, 4, 5];
-let evenNumbers = findEven(array);
-console.log(evenNumbers);
+// const findEven = (array) => {
+//   let even = [];
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] % 2 === 0) {
+//       even.push(array[i]);
+//     }
+//   }
+//   return even;
+// };
+// const array = [1, 2, 3, 4, 5];
+// let evenNumbers = findEven(array);
+// console.log(evenNumbers);
 
-const findOddNumbers = (arr) => {
-  let odd = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 !== 0) {
-      odd.push(arr[i]);
-    }
-  }
-  return odd;
-};
-console.log(findOddNumbers([1, 2, 3, 4, 5]));
+// const findOddNumbers = (arr) => {
+//   let odd = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 !== 0) {
+//       odd.push(arr[i]);
+//     }
+//   }
+//   return odd;
+// };
+// console.log(findOddNumbers([1, 2, 3, 4, 5]));
+
+// Push
+// adding one or more element to an array
+
+const fruits = ["Apple", "Banana", "Cat"];
+let fruit = fruits.push("Mango");
+console.log(fruits);
+
+//
+
+const animals = ["leopard", "Tiger"];
+let animal = animals.unshift("Lion");
+console.log(animals);
+
+const vehicles = ["Car", "Van"];
+let vehicle = vehicles.push("Truck", "Bike");
+console.log(vehicles);
