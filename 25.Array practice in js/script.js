@@ -70,16 +70,43 @@
 // Push
 // adding one or more element to an array
 
-const fruits = ["Apple", "Banana", "Cat"];
-let fruit = fruits.push("Mango");
-console.log(fruits);
+// const fruits = ["Apple", "Banana", "Cat"];
+// let fruit = fruits.push("Mango");
+// console.log(fruits);
 
-//
+// //
 
-const animals = ["leopard", "Tiger"];
-let animal = animals.unshift("Lion");
-console.log(animals);
+// const animals = ["leopard", "Tiger"];
+// let animal = animals.unshift("Lion");
+// console.log(animals);
 
-const vehicles = ["Car", "Van"];
+// const vehicles = ["Car", "Van"];
+// let vehicle = vehicles.push("Truck", "Bike");
+// console.log(vehicles);
+// console.log(vehicle);
+
+// .push Adding one or more element at the end of an array
+
+const vehicles = ["car", "Van"];
 let vehicle = vehicles.push("Truck", "Bike");
 console.log(vehicles);
+
+// .unshift Adding one or more element to the begginging of an array
+
+const animals = ["Tiger"];
+let addAnimals = animals.unshift("Lion", "Leopard", "Elephant");
+console.log(animals);
+
+//pop It is used to remove last element from an array
+
+const cars = ["Tesla", "BMW"];
+let remvoedCar = cars.pop();
+console.log(remvoedCar);
+console.log(cars);
+
+// shift It is used to remove first element from an array and return element
+
+const bikes = ["Duke", "Fz"];
+let removedBike = bikes.shift();
+console.log(removedBike);
+console.log(bikes);
