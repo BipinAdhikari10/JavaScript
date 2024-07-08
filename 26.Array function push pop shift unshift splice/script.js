@@ -19,3 +19,17 @@ const pushArray = (cars, value) => {
 cars = ["Tesla", "BMW"];
 pushArray(cars, "Ferrari");
 console.log(cars);
+
+const pushAnimals = (animals, value) => {
+  animals[animals.length] = value;
+};
+animals = ["Leopard", "Tiger"];
+pushAnimals(animals, "ELephant");
+console.log(animals);
+
+const pushVehicle = (vehicles, value) => {
+  vehicles[vehicles.length] = value;
+};
+const vehicles = ["car", "van"];
+pushVehicle(vehicles, "Truck");
+console.log(vehicles);
