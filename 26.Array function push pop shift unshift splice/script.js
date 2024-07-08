@@ -124,19 +124,66 @@
 // console.log(cars);
 // console.log(returnCar);
 
-const pushArray = (vehicles, value) => {
-  vehicles[vehicles.length] = value;
-  return vehicles.length;
-};
-const vehicles = ["car", "van"];
-let returnVehicles = pushArray(vehicles, "truck");
-console.log(vehicles);
-console.log(returnVehicles);
+// const pushArray = (vehicles, value) => {
+//   vehicles[vehicles.length] = value;
+//   return vehicles.length;
+// };
+// const vehicles = ["car", "van"];
+// let returnVehicles = pushArray(vehicles, "truck");
+// console.log(vehicles);
+// console.log(returnVehicles);
 
-const unshiftArray = (value, carmodels) => {
-  carmodels[0] = value;
-  return carmodels.length;
+// const unshiftArray = (value, carmodels) => {
+//   carmodels[0] = value;
+//   return carmodels.length;
+// // };
+// const carmodels = ["honda", "suzuki"];
+// // let returnCarModels = unshiftArray("Toyota", carmodels);
+// // console.log(carmodels);
+
+// let days = ["Sunday", "Monday", "Friday"];
+
+// let months = ["Jan", "Feb", "March"];
+
+// Array.prototype.helloWorld = () => {
+// //   console.log("Hello world");
+// };
+
+// months.helloWorld();
+// carmodels.helloWorld();
+// console.log(Array
+//     .prototype);
+
+// const add = (...num) => {
+//   console.log(num);
+// };
+// add(1, 2, 3);
+
+// const number = (...num) => {
+//   console.log(num);
+// };
+// number(1, 2, 3, 4);
+
+Array.prototype.myUnshift = function (...parameters) {
+  console.log(this);
+  console.log(parameters);
+  // shift existing array to right
+  for (let i = this.length - 1; i >= 0; i--) {
+    console.log(this);
+    this[i + parameters.length] = this[i];
+  }
+
+  // Add new elements at begining
+  for (let j = 0; j < parameters.length; j++) {
+    this[j] = parameters[j];
+  }
+
+  return this.length;
 };
-const carmodels = ["honda", "suzuki"];
-let returnCarModels = unshiftArray("Toyota", carmodels);
-console.log(carmodels);
+let animals = ["tiger", "lion", "leopard"];
+let vehicles = ["Car", "Jeep", "Van"];
+let returnVehicle = animals.myUnshift("Bus", "Truck");
+console.log(returnVehicle);
+console.log(vehicles);
+
+console.log(["shiva", "bipin", "bandu"][2]);
