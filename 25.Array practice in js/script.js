@@ -155,6 +155,42 @@ const findEvenNumbers = (array) => {
   }
   return even;
 };
-const array = [, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12];
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12];
 let evenNumbers = findEvenNumbers(array);
 console.log(evenNumbers);
+
+const vehicle = ["car", "van", "Tesla", "BMW"];
+let removedVehicle = vehicle.splice(1, 2);
+console.log(removedVehicle);
+console.log(vehicle);
+
+const vehicle1 = ["Car", "Tesla", "BMW", "creta"];
+let addVehicle = vehicle1.splice(1, 2, "Truck", "Bus");
+console.log(addVehicle);
+console.log(vehicle1);
+
+const colors = ["Red", "Blue"];
+let color = colors.splice(1, 0, "Yellow");
+console.log(colors);
+
+// join
+// array to string
+
+const names = ["Bipin", "Adhikari"];
+let name = names.join(" ");
+console.log(name);
+
+// split string to array
+
+const name1 = "Bipin Adhikari";
+let name2 = name1.split("");
+console.log(name2);
+
+let array1 = [1, 2, 3, 4];
+let array2 = [5, 6, 7, 8];
+const combined = array1.concat(array2);
+console.log(combined);
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1);
+console.log(citrus);
