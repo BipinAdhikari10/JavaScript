@@ -41,27 +41,39 @@
 // let newBike = makingPushArray(bikeModels, "KTM");
 // console.log(bikeModels);
 
-// const findSumAndAverage = (arr) => {
+// function findAverageSUm(number) {
 //   let sum = 0;
 //   let average;
+//   for (let i = 1; i <= number; i++) {
+//     sum = sum + i;
+//   }
+//   console.log(sum);
+//   return (average = sum / number);
+// }
+// const average = findAverageSUm(5);
+// console.log(average);
+
+// const findSumAndAverage = (arr) => {
+//   let sum = 0;
+//   // let average;
 //   for (let i = 0; i < arr.length; i++) {
 //     sum = sum + arr[i];
 //   }
 //   console.log(sum);
-//   return (average = sum / arr.length);
+//   return sum / arr.length;
 // };
 // const array = [1, 2, 3, 4, 5];
 // const result = findSumAndAverage(array);
 // console.log(result);
 
-function findAverageSUm(number) {
-  let sum = 0;
-  let average;
-  for (let i = 1; i <= number; i++) {
-    sum = sum + i;
+const findNewNumber = (arr) => {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 2 && arr[i] < 10) {
+      newArr.push(arr[i]);
+    }
   }
-  console.log(sum);
-  return (average = sum / number);
-}
-const average = findAverageSUm(5);
-console.log(average);
+  return newArr;
+};
+const result = findNewNumber([1, 2, 3, 12, 4]);
+console.log(result);
