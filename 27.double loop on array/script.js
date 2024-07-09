@@ -77,3 +77,16 @@ const findNewNumber = (arr) => {
 };
 const result = findNewNumber([1, 2, 3, 12, 4]);
 console.log(result);
+
+// Star pattern
+
+function printStarPattern(number) {
+  for (let i = 1; i <= number; i++) {
+    let star = "";
+    for (let j = 1; j <= i; j++) {
+      star += "* ";
+    }
+    console.log(star);
+  }
+}
+printStarPattern(5);
