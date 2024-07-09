@@ -90,3 +90,15 @@ function printStarPattern(number) {
   }
 }
 printStarPattern(5);
+
+const findMaximumNumber = (arr) => {
+  let maxNum = [0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > maxNum) {
+      maxNum = arr[i];
+    }
+  }
+  return maxNum;
+};
+const number = findMaximumNumber([1, 5, 10, 15, 2, 20, 50]);
+console.log(number);
