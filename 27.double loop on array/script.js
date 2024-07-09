@@ -102,3 +102,14 @@ const findMaximumNumber = (arr) => {
 };
 const number = findMaximumNumber([2, 4, 5, 6, 3, 10, 8]);
 console.log(number);
+
+const reversedArray = (arr) => {
+  let reversed = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    reversed.push(arr[i]);
+  }
+  return reversed;
+};
+const originalArray = [1, 2, 3, 4, 5, 6];
+const newArray = reversedArray(originalArray);
+console.log(newArray);
