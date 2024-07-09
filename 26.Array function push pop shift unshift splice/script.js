@@ -164,26 +164,67 @@
 // };
 // number(1, 2, 3, 4);
 
-Array.prototype.myUnshift = function (...parameters) {
-  console.log(this);
-  console.log(parameters);
-  // shift existing array to right
-  for (let i = this.length - 1; i >= 0; i--) {
-    console.log(this);
-    this[i + parameters.length] = this[i];
-  }
+// Array.prototype.myUnshift = function (...parameters) {
+//   console.log(this);
+//   console.log(parameters);
+//   // shift existing array to right
+//   for (let i = this.length - 1; i >= 0; i--) {
+//     console.log(this);
+//     this[i + parameters.length] = this[i];
+//   }
 
-  // Add new elements at begining
-  for (let j = 0; j < parameters.length; j++) {
-    this[j] = parameters[j];
-  }
+//   // Add new elements at begining
+//   for (let j = 0; j < parameters.length; j++) {
+//     this[j] = parameters[j];
+//   }
 
-  return this.length;
+//   return this.length;
+// };
+// let animals = ["tiger", "lion", "leopard"];
+// let vehicles = ["Car", "Jeep", "Van"];
+// let returnVehicle = animals.myUnshift("Bus", "Truck");
+// console.log(returnVehicle);
+// console.log(vehicles);
+
+// console.log(["shiva", "bipin", "bandu"][2]);
+
+// Array.prototype.myUnshift = function (...parameter) {
+//   // Shift existing to length
+
+//   for (i = this.length - 1; i <= 0; i--) {
+//     this[i + parameter.length] = this[i];
+//   }
+//   // Adding new elements at begginging
+//   for (j = 0; j < parameter.length; j++) {
+//     this[j] = parameter[j];
+//   }
+//   return this.length;
+// };
+// let vehicles = ["Car", "jeep", "van"];
+// vehicles.
+// myUnshift("Bus", "Truck", "Tractor");
+// console.log(vehicles);
+
+// Array.prototype.myPop = function () {
+//   // if array is empty return undefined
+
+//   if (this.length === 0) {
+//     return undefined;
+//   }
+//   // Getting the last element
+//   const lastElement=[this.length-1]
+
+// };
+
+// Find the sum and average of the given data
+
+const findSumAndAverage = (numbers) => {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum = sum + numbers[i];
+  }
+  console.log(sum);
+  return sum / numbers.length;
 };
-let animals = ["tiger", "lion", "leopard"];
-let vehicles = ["Car", "Jeep", "Van"];
-let returnVehicle = animals.myUnshift("Bus", "Truck");
-console.log(returnVehicle);
-console.log(vehicles);
-
-console.log(["shiva", "bipin", "bandu"][2]);
+const average = findSumAndAverage([1, 2, 3, 4, 5, 6, 7]);
+console.log(average);
