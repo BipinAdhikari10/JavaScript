@@ -100,5 +100,5 @@ const findMaximumNumber = (arr) => {
   }
   return maxNum;
 };
-const number = findMaximumNumber([1, 5, 10, 15, 2, 20, 50]);
+const number = findMaximumNumber([2, 4, 5, 6, 3, 10, 8]);
 console.log(number);
