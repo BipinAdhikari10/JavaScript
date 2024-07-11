@@ -23,3 +23,14 @@ const sumOfEvenNumber = (arr) => {
 const number = [1, 2, 3, 4, 5, 6, 7];
 const suOfEven = sumOfEvenNumber(number);
 console.log(suOfEven);
+
+const productNum = (arr) => {
+  product = 1;
+  for (let i = 0; i < arr.length; i++) {
+    product = product * arr[i];
+  }
+  return product;
+};
+const productNumber = [1, 2, 3, 4, 5];
+const multiplyNumber = productNum(productNumber);
+console.log(multiplyNumber);
