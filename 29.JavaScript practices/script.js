@@ -7,6 +7,19 @@ const removeDuplicates = (arr) => {
   }
   return unique;
 };
-const numbers = [1, 2, 2, 4, 5, 6, 7, 5, 4];
+const numbers = [1, 2, 2, 4];
 let uniqueNumber = removeDuplicates(numbers);
 console.log(uniqueNumber);
+
+const sumOfEvenNumber = (arr) => {
+  sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      sum = sum + arr[i];
+    }
+  }
+  return sum;
+};
+const number = [1, 2, 3, 4, 5, 6, 7];
+const suOfEven = sumOfEvenNumber(number);
+console.log(suOfEven);
