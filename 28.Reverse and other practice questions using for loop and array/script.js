@@ -31,14 +31,27 @@
 
 // Write a function that takes an array of numbers and returns the sum of the square roots of all elements.
 
-function sumOfSquareRoots(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += Math.sqrt(arr[i]);
-  }
-  return sum;
-}
+// function sumOfSquareRoots(arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum = sum + Math.sqrt(arr[i]);
+//   }
+//   return sum;
+// }
+// const numbers = [1, 4, 9, 16, 25, 36];
+// let result = sumOfSquareRoots(numbers);
+// console.log(result);
 
-let numbers = [1, 4, 9, 16, 25, 64];
-let result = sumOfSquareRoots(numbers);
-console.log(result);
+// function removeDuplicateNum(arr) {
+//   let unique = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (unique.indexOf(arr[i]) === -1) {
+//       unique.push(arr[i]);
+//       console.log(unique);
+//     }
+//   }
+//   return unique;
+// }
+// let number = [5, 2, 2, 4, 4, 6, 7, 10, 12, 10];
+// let result = removeDuplicateNum(number);
+// console.log(result);
