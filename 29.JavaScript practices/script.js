@@ -55,13 +55,45 @@
 // const secondSmallest = findSecondSmallest(array);
 // console.log("Second smallest element:", secondSmallest);
 
-function countOccurances(arr, value) {
-  let count = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === value) count++;
+// function countOccurances(arr, value) {
+//   let count = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === value) count++;
+//   }
+//   return count;
+// }
+// const arrNumber = [2, 3, 4, 5, 2, 6];
+// let newArrNumber = countOccurances(arrNumber, 2);
+// console.log(newArrNumber);
+
+// check prime number using an array
+
+function checkPrime(num) {
+  if (num <= 1) {
+    return false;
   }
-  return count;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
 }
-const arrNumber = [1, 2, 3, 2, 4, 2, 5];
-let newArrNumber = countOccurances(arrNumber, 2);
-console.log(newArrNumber);
+
+function checkPrimeArray(arr) {
+  let prime = [];
+  for (let i = 0; i < arr.length; i++) {
+    const isPrime = checkPrime(arr[i]);
+    prime.push(isPrime);
+    if (isPrime) {
+      console.log(arr[i] + " is a prime number");
+    } else {
+      console.log(arr[i] + " is not a prime number");
+    }
+  }
+  return prime;
+}
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let primeNumbers = checkPrimeArray(numbers);
+console.log("Prime checks array:", primeNumbers);
