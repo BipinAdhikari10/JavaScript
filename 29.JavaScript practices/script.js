@@ -1,36 +1,67 @@
-const removeDuplicates = (arr) => {
-  let unique = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (unique.indexOf(arr[i]) === -1) {
-      unique.push(arr[i]);
-    }
-  }
-  return unique;
-};
-const numbers = [1, 2, 2, 4];
-let uniqueNumber = removeDuplicates(numbers);
-console.log(uniqueNumber);
+// const removeDuplicates = (arr) => {
+//   let unique = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (unique.indexOf(arr[i]) === -1) {
+//       unique.push(arr[i]);
+//     }
+//   }
+//   return unique;
+// };
+// const numbers = [1, 2, 2, 4];
+// let uniqueNumber = removeDuplicates(numbers);
+// console.log(uniqueNumber);
 
-const sumOfEvenNumber = (arr) => {
-  sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0) {
-      sum = sum + arr[i];
-    }
-  }
-  return sum;
-};
-const number = [1, 2, 3, 4, 5, 6, 7];
-const suOfEven = sumOfEvenNumber(number);
-console.log(suOfEven);
+// const sumOfEvenNumber = (arr) => {
+//   sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0) {
+//       sum = sum + arr[i];
+//     }
+//   }
+//   return sum;
+// };
+// const number = [1, 2, 3, 4, 5, 6, 7];
+// const suOfEven = sumOfEvenNumber(number);
+// console.log(suOfEven);
 
-const productNum = (arr) => {
-  product = 1;
+// const productNum = (arr) => {
+//   product = 1;
+//   for (let i = 0; i < arr.length; i++) {
+//     product = product * arr[i];
+//   }
+//   return product;
+// };
+// const productNumber = [2, 4, 5, 6, 7];
+// const multiplyNumber = productNum(productNumber);
+// console.log(multiplyNumber);
+
+// function findSecondSmallest(arr) {
+//   let smallest = Infinity;
+//   let secondSmallest = Infinity;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < smallest) {
+//       secondSmallest = smallest;
+//       smallest = arr[i];
+//     } else if (arr[i] < secondSmallest && arr[i] !== smallest) {
+//       secondSmallest = arr[i];
+//     }
+//   }
+
+//   return secondSmallest;
+// }
+
+// const array = [12, 4, 5, 6, 7, 3, 8];
+// const secondSmallest = findSecondSmallest(array);
+// console.log("Second smallest element:", secondSmallest);
+
+function countOccurances(arr, value) {
+  let count = 0;
   for (let i = 0; i < arr.length; i++) {
-    product = product * arr[i];
+    if (arr[i] === value) count++;
   }
-  return product;
-};
-const productNumber = [1, 2, 3, 4, 5];
-const multiplyNumber = productNum(productNumber);
-console.log(multiplyNumber);
+  return count;
+}
+const arrNumber = [1, 2, 3, 2, 4, 2, 5];
+let newArrNumber = countOccurances(arrNumber, 2);
+console.log(newArrNumber);
