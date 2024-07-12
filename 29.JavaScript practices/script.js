@@ -120,6 +120,14 @@
 // let primeNumbers = checkPrimeArrayNUmber(numbers);
 // console.log(primeNumbers);
 
-const numbers = [25, 36, 49, 64];
-const squareRoot = numbers.map(Math.sqrt);
-console.log(squareRoot);
+// const numbers = [25, 36, 49, 64];
+// const squareRoot = numbers.map(Math.sqrt);
+// console.log(squareRoot);
+
+//
+
+// const numbers = [2, 4, 5, 6, 7, 8];
+// console.log(numbers.map((num) => num * 3));
+
+const squareNumbers = [2, 4, 5, 6, 7, 8];
+console.log(squareNumbers.map((num) => num * num));
