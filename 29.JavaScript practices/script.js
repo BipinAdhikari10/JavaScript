@@ -68,32 +68,54 @@
 
 // check prime number using an array
 
+// function checkPrime(num) {
+//   if (num <= 1) {
+//     return false;
+//   }
+//   for (let i = 2; i <= Math.sqrt(num); i++) {
+//     if (num % i === 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// function checkPrimeArray(arr) {
+//   let prime = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     const isPrime = checkPrime(arr[i]);
+//     prime.push(isPrime);
+//     if (isPrime) {
+//       console.log(arr[i] + " is a prime number");
+//     } else {
+//       console.log(arr[i] + " is not a prime number");
+//     }
+//   }
+//   return prime;
+// }
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let primeNumbers = checkPrimeArray(numbers);
+// console.log("Prime checks array:", primeNumbers);
+
 function checkPrime(num) {
   if (num <= 1) {
     return false;
   }
-  for (let i = 2; i <= Math.sqrt(num); i++) {
+  for (let i = 2; i < Math.sqrt(num); i++) {
     if (num % i === 0) {
       return false;
     }
   }
   return true;
 }
-
-function checkPrimeArray(arr) {
+function checkPrimeArrayNUmber(arr) {
   let prime = [];
   for (let i = 0; i < arr.length; i++) {
-    const isPrime = checkPrime(arr[i]);
-    prime.push(isPrime);
-    if (isPrime) {
-      console.log(arr[i] + " is a prime number");
-    } else {
-      console.log(arr[i] + " is not a prime number");
-    }
+    prime.push(checkPrime(arr[i]));
   }
   return prime;
 }
-
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let primeNumbers = checkPrimeArray(numbers);
-console.log("Prime checks array:", primeNumbers);
+let primeNumbers = checkPrimeArrayNUmber(numbers);
+console.log(primeNumbers);
