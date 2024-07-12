@@ -129,5 +129,20 @@
 // const numbers = [2, 4, 5, 6, 7, 8];
 // console.log(numbers.map((num) => num * 3));
 
-const squareNumbers = [2, 4, 5, 6, 7, 8];
-console.log(squareNumbers.map((num) => num * num));
+// const squareNumbers = [2, 4, 5, 6, 7, 8];
+// console.log(squareNumbers.map((num) => num * num));
+
+// function multiply(num) {
+//   return num * 10;
+// }
+
+// const numbers = [10, 20, 30, 40];
+// let newArr = numbers.map(multiply);
+// console.log(newArr);
+
+function multiplyNumber(num) {
+  return num * 10;
+}
+let numbers = [10, 20, 30, 40, 50];
+let newArr = numbers.map(multiplyNumber);
+console.log(newArr);
