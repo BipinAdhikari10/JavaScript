@@ -140,9 +140,25 @@
 // let newArr = numbers.map(multiply);
 // console.log(newArr);
 
-function multiplyNumber(num) {
-  return num * 10;
-}
-let numbers = [10, 20, 30, 40, 50];
-let newArr = numbers.map(multiplyNumber);
-console.log(newArr);
+// function multiplyNumber(num) {
+//   return num * 10;
+// }
+// let numbers = [10, 20, 30, 40, 50];
+// let newArr = numbers.map(multiplyNumber);
+// console.log(newArr);
+
+const pairsArray = (arr) => {
+  let target = 9;
+  pairs = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if ((arr[i] = arr[j] === target)) {
+        pairs.push(arr[i]);
+      }
+    }
+  }
+  return pairs;
+};
+const numbers = [2, 7, 11, 15];
+const resultTarget = pairsArray(numbers);
+console.log(resultTarget);
