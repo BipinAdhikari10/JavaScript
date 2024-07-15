@@ -116,6 +116,21 @@
 // let reverseEle = reversedElements(originalElements);
 // console.log(reverseEle);
 
-const fruits = ["apple", "banana", "mango"];
-let reversedArray = fruits.reverse();
-console.log(reversedArray);
+// const fruits = ["apple", "banana", "mango"];
+// let reversedArray = fruits.reverse();
+// console.log(reversedArray);
+
+// const animals = ["Tiger", "Lion", "Leopard", "Elephant", "Rhino"];
+// let reversedArray = animals.reverse();
+// console.log(reversedArray);
+
+// Reverse string
+
+const reversedString = (name) => {
+  let reversed = "";
+  for (let i = name.length - 1; i >= 0; i--) {
+    reversed = reversed + name[i];
+  }
+  console.log(reversed);
+};
+reversedString("Bipin");
