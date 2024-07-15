@@ -93,4 +93,14 @@ const printInfo = (cars) => {
   let twelvethElement = cars[11];
   let length = cars.length;
 };
-console.log(printInfo(["tata", "gagbadgajbtajbgajkvfa"]));
+
+// Reverse element
+
+const reverseElement = (element) => {
+  let reverse = [];
+  for (let i = 0; i < element.length; i++) {
+    reverse.unshift(element[i]);
+  }
+  console.log(reverse);
+};
+reverseElement(["car", "van", "taxi", "bus"]);
