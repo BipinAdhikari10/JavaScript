@@ -105,13 +105,17 @@
 // };
 // reverseElement(["car", "van", "taxi", "bus"]);
 
-const reversedElements = (elements) => {
-  let reversed = [];
-  for (let i = elements.length - 1; i >= 0; i--) {
-    reversed.push(elements[i]);
-  }
-  return reversed;
-};
-const originalElements = ["Apple", "Banana", "Cat"];
-let reverseEle = reversedElements(originalElements);
-console.log(reverseEle);
+// const reversedElements = (elements) => {
+//   let reversed = [];
+//   for (let i = elements.length - 1; i >= 0; i--) {
+//     reversed.push(elements[i]);
+//   }
+//   return reversed;
+// };
+// const originalElements = ["Apple", "Banana", "Cat"];
+// let reverseEle = reversedElements(originalElements);
+// console.log(reverseEle);
+
+const fruits = ["apple", "banana", "mango"];
+let reversedArray = fruits.reverse();
+console.log(reversedArray);
