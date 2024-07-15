@@ -126,11 +126,19 @@
 
 // Reverse string
 
-const reversedString = (name) => {
-  let reversed = "";
-  for (let i = name.length - 1; i >= 0; i--) {
-    reversed = reversed + name[i];
-  }
-  console.log(reversed);
-};
-reversedString("Bipin");
+// const reversedString = (name) => {
+//   let reversed = "";
+//   for (let i = name.length - 1; i >= 0; i--) {
+//     reversed = reversed + name[i];
+//   }
+//   console.log(reversed);
+// };
+// reversedString("Bipin");
+
+// const sentences = "How are you doing today";
+// let array = sentences.split();
+// console.log(array);
+
+const text = "How are you doing today?";
+let myArray = text.split("");
+console.log(myArray);
