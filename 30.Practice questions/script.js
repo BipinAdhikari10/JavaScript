@@ -139,6 +139,87 @@
 // let array = sentences.split();
 // console.log(array);
 
-const text = "How are you doing today?";
-let myArray = text.split("");
-console.log(myArray);
+// const text = "How are you doing today?";
+// let myArray = text.split(" ");
+// console.log(myArray);
+// // let word = myArray[1];
+// // console.log(word);
+
+// // const fruits = ["apple", "banana", "mango"];
+// // let arrayFruits = fruits.join();
+// // console.log(arrayFruits);
+
+// const fruits = ["apple", "banana"];
+// let newArr = fruits.join(" and ");
+// console.log(newArr);
+
+// const message = "Hello Goodmorning,I am busy today";
+// let newArr = message.split(" ");
+// console.log(newArr);
+
+// const message = "Hello";
+// let newArr = message.split("");
+// console.log(newArr);
+
+// Reversed the function using split
+
+// const reversedString = (string) => {
+//   let reversed = [];
+//   let splitArray = string.split("B");
+//   for (let i = splitArray.length - 1; i >= 0; i--) {
+//     reversed = reversed + splitArray[i];
+//   }
+//   return reversed;
+// };
+// const sentences = "HelloBipin";
+// let reversedSplit = reversedString(sentences);
+// console.log(reversedSplit);
+
+// Reversed the function using join
+
+// const reversedJoinArray = (str) => {
+//   let reverse = [];
+//   let joinArray = str.join("+");
+//   for (let i = joinArray.length - 1; i >= 0; i--) {
+//     reverse = reverse + joinArray[i];
+//   }
+//   return reverse;
+// };
+// const originalArray = ["Messi", "Martinez", "Dimaria"];
+// let reverseJoin = reversedJoinArray(originalArray);
+// console.log(reverseJoin);
+
+// let statement = "Hello i am bipin";
+// let stringArr = statement.split("");
+// let arrReverse = stringArr.reverse();
+// let joinArr = arrReverse.join("");
+// console.log(joinArr);
+// // console.log(arrReverse);
+
+// let arr = ["dog", "cat", "tiger"];
+// let newarr = arr.join("");
+// console.log(newarr);
+// let newresult = newarr.split(",");
+// let newArray = newresult.reverse();
+// console.log(newArray);
+// // console.log(newresult);
+
+let array = ["dog", "cat", "tiger"]; //Expected Result: ['regit','tac','regit']
+
+// let newVariable = array[0];
+// console.log(newVariable);
+
+const reverseArrayElements = (animals) => {
+  let reversed = animals.reverse();
+  let newArray = [];
+
+  for (let i = 0; i <= reversed.length - 1; i++) {
+    let element = reversed[i];
+    let elementArray = element.split("");
+    let reversedArray = elementArray.reverse();
+    let reversedString = reversedArray.join("");
+    newArray.push(reversedString);
+    console.log(newArray);
+  }
+};
+reverseArrayElements(array);
