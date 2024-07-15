@@ -84,23 +84,34 @@
 
 // reversedNumberUsingRemainder(2468);
 
-const printInfo = (cars) => {
-  let firstIndex = 0;
-  let FirsElement = [0];
-  let lastIndex = cars.length - 1;
-  let lastElement = cars[cars.length - 1];
-  let seventhIndex = 7;
-  let twelvethElement = cars[11];
-  let length = cars.length;
-};
+// const printInfo = (cars) => {
+//   let firstIndex = 0;
+//   let FirsElement = [0];
+//   let lastIndex = cars.length - 1;
+//   let lastElement = cars[cars.length - 1];
+//   let seventhIndex = 7;
+//   let twelvethElement = cars[11];
+//   let length = cars.length;
+// };
 
-// Reverse element
+// // Reverse element
 
-const reverseElement = (element) => {
-  let reverse = [];
-  for (let i = 0; i < element.length; i++) {
-    reverse.unshift(element[i]);
+// const reverseElement = (element) => {
+//   let reverse = [];
+//   for (let i = 0; i < element.length; i++) {
+//     reverse.unshift(element[i]);
+//   }
+//   console.log(reverse);
+// };
+// reverseElement(["car", "van", "taxi", "bus"]);
+
+const reversedElements = (elements) => {
+  let reversed = [];
+  for (let i = elements.length - 1; i >= 0; i--) {
+    reversed.push(elements[i]);
   }
-  console.log(reverse);
+  return reversed;
 };
-reverseElement(["car", "van", "taxi", "bus"]);
+const originalElements = ["Apple", "Banana", "Cat"];
+let reverseEle = reversedElements(originalElements);
+console.log(reverseEle);
