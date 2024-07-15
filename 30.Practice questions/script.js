@@ -57,10 +57,40 @@
 // };
 // printNum(273);
 
-const reversedNumber = (num) => {
-  let stringNum = num.toString();
-  for (let i = stringNum.length - 1; i >= 0; i--) {
-    console.log(stringNum[i]);
-  }
+// const reversedNumber = (num) => {
+//   let stringNum = num.toString();
+//   let reversed = "";
+//   for (let i = stringNum.length - 1; i >= 0; i--) {
+//     reversed = reversed + stringNum[i];
+//   }
+//   console.log(reversed);
+
+//   for (let j = 0; j < reversed.length - 2; j++) {
+//     console.log(reversed[j]);
+//   }
+// };
+// reversedNumber(789);
+
+// const reversedNumberUsingRemainder = (num) => {
+//   let string = num.toString();
+//   let reversed = "";
+//   for (let i = string.length - 1; i >= 0; i--) {
+//     let remainder = num % 10;
+//     reversed = reversed + remainder;
+//     num = parseInt(num / 10);
+//   }
+//   console.log(reversed);
+// };
+
+// reversedNumberUsingRemainder(2468);
+
+const printInfo = (cars) => {
+  let firstIndex = 0;
+  let FirsElement = [0];
+  let lastIndex = cars.length - 1;
+  let lastElement = cars[cars.length - 1];
+  let seventhIndex = 7;
+  let twelvethElement = cars[11];
+  let length = cars.length;
 };
-reversedNumber(789456123);
+console.log(printInfo(["tata", "gagbadgajbtajbgajkvfa"]));
