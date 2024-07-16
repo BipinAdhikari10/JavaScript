@@ -1,17 +1,12 @@
-// Reverse the given array using split and join
-
 const reverseArray = (animals) => {
-  animals.reverse();
-  let newArr = [];
+  let reversed = [];
   for (let i = 0; i <= animals.length - 1; i++) {
     let element = animals[i];
-    let elementArray = element.split("");
-    let reverseArrayElement = elementArray.reverse();
-    let reverseString = reverseArrayElement.join("");
-    newArr.push(reverseString);
+    let reversedArr = element.split("");
+    let reverseElement = reversedArr.reverse();
+    let reversedString = reverseElement.join("");
+    reversed.unshift(reversedString);
   }
-  return newArr;
+  console.log(reversed);
 };
-const originalElement = ["cat", "dog", "tiger"];
-let reverseElementArray = reverseArray(originalElement);
-console.log(reverseElementArray);
+reverseArray(["cat", "dog", "cow"]);
