@@ -204,22 +204,21 @@
 // console.log(newArray);
 // // console.log(newresult);
 
-let array = ["dog", "cat", "tiger"]; //Expected Result: ['regit','tac','regit']
+// let array = ["dog", "cat", "tiger"]; //Expected Result: ['regit','tac','regit']
 
 // let newVariable = array[0];
 // console.log(newVariable);
 
-const reverseArrayElements = (animals) => {
-  let reversed = animals.reverse();
-  let newArray = [];
-
-  for (let i = 0; i <= reversed.length - 1; i++) {
-    let element = reversed[i];
-    let elementArray = element.split("");
-    let reversedArray = elementArray.reverse();
-    let reversedString = reversedArray.join("");
-    newArray.push(reversedString);
-    console.log(newArray);
+const reverseArray = (animals) => {
+  animals.reverse();
+  let newResult = [];
+  for (let i = 0; i <= animals.length - 1; i++) {
+    let element = animals[i];
+    let newArr = element.split("");
+    let reverseArr = newArr.reverse();
+    let reverseString = reverseArr.join("");
+    newResult.push(reverseString);
+    console.log(newResult);
   }
 };
-reverseArrayElements(array);
+reverseArray(["cat", "dog"]);
