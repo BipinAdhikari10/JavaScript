@@ -66,16 +66,25 @@
 // let result = findArrayElement(number, element);
 // console.log(result);
 
-const findIndices = (arr, ele) => {
-  let indices = [];
-  for (let i = 0; i <= arr.length - 1; i++) {
-    if (arr[i] === ele) {
-      indices.push(i);
-    }
+// const findIndices = (arr, ele) => {
+//   let indices = [];
+//   for (let i = 0; i <= arr.length - 1; i++) {
+//     if (arr[i] === ele) {
+//       indices.push(i);
+//     }
+//   }
+//   return indices;
+// };
+// let number = [1, 2, 2, 4, 6, 2];
+// let element = 2;
+// let result = findIndices(number, element);
+// console.log(result);
+
+const findPower = (num) => {
+  let power = 1;
+  for (let i = 1; i <= 5; i++) {
+    power = power * num;
+    console.log(power);
   }
-  return indices;
 };
-let number = [1, 2, 2, 4, 6, 2];
-let element = 2;
-let result = findIndices(number, element);
-console.log(result);
+findPower(2);
