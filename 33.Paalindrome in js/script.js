@@ -1,12 +1,12 @@
 const isPalindrome = (str) => {
-  const reversedString = str.split("").reverse().join("");
-
+  let reversedString = str.split("").reverse().join("");
   if (str === reversedString) {
     return true;
   }
+
   return false;
 };
-let strings = "mom";
+let strings = "bipin";
 let value = isPalindrome(strings);
 if (value) {
   console.log("The string is palindrome");
