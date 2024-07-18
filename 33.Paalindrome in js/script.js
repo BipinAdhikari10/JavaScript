@@ -44,9 +44,36 @@
 // let joinedStrings = string.charAt(0).toUpperCase() + string.slice(1);
 // console.log(joinedStrings);
 
-const printCube = (num) => {
-  return (cubeNumber = num * num * num);
+// const printCube = (num) => {
+//   return (cubeNumber = num * num * num);
+// };
+// const number = 4;
+// let result = printCube(number);
+// console.log(result);
+
+// let number = 4;
+// let cube = 0;
+
+// for (let i = 1; i <= 3; i++) {
+//   cube = number * number * number;
+// }
+
+// console.log("Cube of", number, "is:", cube);
+
+const isPrime = (num) => {
+  if (num <= 1) {
+    return false;
+  }
+  for (i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
 };
-const number = 4;
-let result = printCube(number);
-console.log(result);
+
+for (let i = 0; i <= 20; i++) {
+  if (isPrime(i)) {
+    console.log(i);
+  }
+}
