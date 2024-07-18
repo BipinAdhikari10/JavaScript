@@ -13,3 +13,9 @@ if (value) {
 } else {
   console.log("The string is not palindrome");
 }
+
+let arr = ["t", "r", "e", "e"];
+let string = arr.join("");
+let joinedStrings = string.charAt(0).toUpperCase() + string.slice(1);
+
+console.log(joinedStrings);
