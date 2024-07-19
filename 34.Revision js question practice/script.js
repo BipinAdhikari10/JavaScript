@@ -51,7 +51,6 @@ let data = ["52020", "Horse", "2024", "Apple"];
 
 // reverseData(data);
 
-data = ["52020", "Horse", "2024", "Apple"];
 // let newArr = [];
 // const reverseData = (arr) => {
 //   for (let i = 0; i < arr.length - 1; i++) {
@@ -65,15 +64,32 @@ data = ["52020", "Horse", "2024", "Apple"];
 // };
 // reverseData(data);
 
-const reverseArrayData = (data) => {
-  let reversedArray = [];
-  for (let i = 1; i < data.length - 1; i++) {
-    console.log(data[i]);
-    let element = data[i];
-    // console.log(element);
-    let elementReversed = element.split("").reverse().join("");
-    reversedArray.push(elementReversed);
+// const reverseArrayData = (data) => {
+//   let reversedArray = [];
+//   for (let i = 1; i < data.length - 1; i++) {
+//     console.log(data[i]);
+//     let element = data[i];
+//     // console.log(element);
+//     let elementReversed = element.split("").reverse().join("");
+//     reversedArray.push(elementReversed);
+//   }
+//   console.log(reversedArray);
+// };
+// reverseArrayData(data);
+
+data = ["52020", "Horse", "2024", "Apple"];
+
+const reverseArrayElement = (arr) => {
+  arr.reverse();
+  let newArr = [];
+  // console.log(arr);
+
+  for (let i = 0; i <= arr.length - 1; i++) {
+    // console.log(arr[i]);
+    let element = arr[i];
+    let elementArr = element.split("").splice(3).reverse().join("");
+    newArr.push(elementArr);
   }
-  console.log(reversedArray);
+  console.log(newArr);
 };
-reverseArrayData(data);
+reverseArrayElement(data);
