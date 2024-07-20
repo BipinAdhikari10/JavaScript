@@ -75,25 +75,61 @@
 
 // dataReverse(data);
 
-const reverseArrayElement = (arr) => {
-  let reversedArr = arr.reverse();
-  let newArr = [];
-  for (let i = 0; i <= reversedArr.length - 1; i++) {
-    // console.log(arr[i]);
+// const reverseArrayElement = (arr) => {
+//   let reversedArr = arr.reverse();
+//   let newArr = [];
+//   for (let i = 0; i <= reversedArr.length - 1; i++) {
+//     // console.log(arr[i]);
 
-    let reverseElement = reversedArr[i].split("").reverse().join("");
-    // console.log(reverseElement);
-    let strings = "";
+//     let reverseElement = reversedArr[i].split("").reverse().join("");
+//     // console.log(reverseElement);
+//     let strings = "";
 
-    for (let j = 0; j < reversedArr[i].length - 3; j++) {
-      strings = strings + reverseElement[j];
-    }
-    newArr.push(strings);
-  }
+//     for (let j = 0; j < reversedArr[i].length - 3; j++) {
+//       strings = strings + reverseElement[j];
+//     }
+//     newArr.push(strings);
+//   }
 
-  return newArr;
-};
+//   return newArr;
+// };
 
-let data = ["52020", "Horse", "2024", "Apple"];
-let reversedData = reverseArrayElement(data);
-console.log(reversedData);
+// let data = ["52020", "Horse", "2024", "Apple"];
+// let reversedData = reverseArrayElement(data);
+// console.log(reversedData);
+
+// const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+// const citrus = fruits.slice(1, 4);
+// console.log(citrus);
+
+// const isPrime = (num) => {
+//   if (num <= 1) {
+//     return false;
+//   }
+//   for (let i = 2; i <= Math.sqrt(num); i++) {
+//     if (num % i === 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+// for (let i = 1; i <= 20; i++) {
+//   if (isPrime(i)) {
+//     console.log(i);
+//   }
+// }
+
+// Array.prototype.helloWorld = () => {
+//   console.log("Hello world");
+// };
+
+Array.prototype.meroRollNumber = "1";
+// console.log(Array.prototype);
+
+let arr = [1, 3, 4];
+// arr.helloWorld();
+console.log(arr.meroRollNumber);
+console.log(arr.length);
+
+// verb=function
+//Noun= property
