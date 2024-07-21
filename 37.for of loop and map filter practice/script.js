@@ -84,10 +84,10 @@
 
 // const dollarPrice = (arr) => {
 //   let euro = 0.85;
-//   newPrice = [];
+//  let newPrice = [];
 //   for (ele of arr) {
-//     convert = euro * ele;
-//     newPrice.push(convert);
+//    let convertedPrice = euro * ele;
+//     newPrice.push(convertedPrice);
 //   }
 //   return newPrice;
 // };
@@ -97,7 +97,38 @@
 
 // using map function
 
-let price = [10, 20, 30, 40];
-let euros = 0.85;
-let dollar = price.map((ele) => ele * euros);
-console.log(dollar);
+// let price = [10, 20, 30, 40];
+// let euros = 0.85;
+// let dollar = price.map((ele) => ele * euros);
+// console.log(dollar);
+
+// const upprcaseString = (arr) => {
+//   let newArr = [];
+//   for (let i = 0; i <= arr.length - 1; i++) {
+//     let element = arr[i];
+//     let newArray = element.toUpperCase();
+//     newArr.push(newArray);
+//   }
+//   console.log(newArr);
+// };
+// upprcaseString(["hello", "Bipin", "Kxa"]);
+
+// using for of loop
+
+const name = ["Bipin", "Naran", "Ramparsad", "Harilal"];
+
+const friendName = (arr) => {
+  let newArray = [];
+  for (let name of arr) {
+    let element = name;
+    let newArr = element.toUpperCase();
+    newArray.push(newArr);
+  }
+  console.log(newArray);
+};
+friendName(name);
+
+let cars = ["tesla", "bmw", "Byd", "creTa"];
+
+let newCars = cars.map((cars) => cars.toUpperCase());
+console.log(newCars);
