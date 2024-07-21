@@ -54,3 +54,9 @@ let elementLength = (strings) => {
   console.log(newArray);
 };
 elementLength(["Hello", "kxa", "Bipin"]);
+
+// double element using map function
+
+let numbers = [1, 2, 3, 4];
+let doubleNumbers = numbers.map((ele) => ele * 2);
+console.log(doubleNumbers);
