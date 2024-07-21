@@ -57,20 +57,19 @@
 
 // double element using map function
 
-let numbers = [1, 2, 3, 4];
 // let doubleNumbers = numbers.map((ele) => ele * 2);
 // console.log(doubleNumbers);
 
-const doubleNum = (arr) => {
-  let newArr = [];
-  for (let i = 0; i <= arr.length - 1; i++) {
-    let element = arr[i];
-    let double = element + element;
-    newArr.push(double);
-  }
-  console.log(newArr);
-};
-doubleNum(numbers);
+// const doubleNum = (arr) => {
+//   let newArr = [];
+//   for (let i = 0; i <= arr.length - 1; i++) {
+//     let element = arr[i];
+//     let double = element + element;
+//     newArr.push(double);
+//   }
+//   console.log(newArr);
+// };
+// doubleNum(numbers);
 
 // const doubleNumber = (arr) => {
 //   let newArr = [];
@@ -80,3 +79,25 @@ doubleNum(numbers);
 //   console.log(newArr);
 // };
 // doubleNumber(numbers);
+
+// convert dollars price to euro price
+
+// const dollarPrice = (arr) => {
+//   let euro = 0.85;
+//   newPrice = [];
+//   for (ele of arr) {
+//     convert = euro * ele;
+//     newPrice.push(convert);
+//   }
+//   return newPrice;
+// };
+
+// let priceIn$ = dollarPrice(price);
+// console.log(priceIn$);
+
+// using map function
+
+let price = [10, 20, 30, 40];
+let euros = 0.85;
+let dollar = price.map((ele) => ele * euros);
+console.log(dollar);
