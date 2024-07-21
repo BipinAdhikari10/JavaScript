@@ -115,20 +115,61 @@
 
 // using for of loop
 
-const name = ["Bipin", "Naran", "Ramparsad", "Harilal"];
+// const name = ["Bipin", "Naran", "Ramparsad", "Harilal"];
 
-const friendName = (arr) => {
-  let newArray = [];
-  for (let name of arr) {
-    let element = name;
-    let newArr = element.toUpperCase();
-    newArray.push(newArr);
+// const friendName = (arr) => {
+//   let newArray = [];
+//   for (let name of arr) {
+//     let element = name;
+//     let newArr = element.toUpperCase();
+//     newArray.push(newArr);
+//   }
+//   console.log(newArray);
+// };
+// friendName(name);
+
+// let cars = ["tesla", "bmw", "Byd", "creTa"];
+
+// let newCars = cars.map((cars) => cars.toUpperCase());
+// console.log(newCars);
+
+// const increasedArray = (arr) => {
+//   let newArray = [];
+//   for (let i = 0; i <= arr.length - 1; i++) {
+//     let newArr = arr[i] + 5;
+//     newArray.push(newArr);
+//   }
+
+//   console.log(newArray);
+// };
+// increasedArray([2, 4, 5, 6]);
+
+// const increasedNumber = (arr) => {
+//   let newArrayNumber = [];
+//   for (let element of arr) {
+//     newArrayNumber.push(element + 5);
+//   }
+//   console.log(newArrayNumber);
+// };
+// increasedNumber([10, 12, 13, 14]);
+
+// let number = [10, 20, 30, 45, 6];
+// let newNumber = number.map((number) => number + 5);
+// console.log(newNumber);
+
+let number = 6789;
+
+const reverseNumber = (num) => {
+  let stringNumber = num.toString();
+  // console.log(typeof stringNumber);
+  let reversed = "";
+
+  for (let i = stringNumber.length - 1; i >= 0; i--) {
+    let remainder = num % 10;
+    reversed = reversed + remainder;
+    num = parseInt(num / 10);
   }
-  console.log(newArray);
+  console.log(reversed);
 };
-friendName(name);
 
-let cars = ["tesla", "bmw", "Byd", "creTa"];
-
-let newCars = cars.map((cars) => cars.toUpperCase());
-console.log(newCars);
+reverseNumber(number);
