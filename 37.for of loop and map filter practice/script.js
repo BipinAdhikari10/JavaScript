@@ -14,5 +14,8 @@ let array = [1, 4, 3, 6, 8, 7, 10];
 
 // using filter function
 
-let newArray = array.filter((ele) => ele > 2 && ele < 10 && ele % 2 === 0);
+// let newArray = array.filter((ele) => ele > 2 && ele < 10 && ele % 2 === 0);
+// console.log(newArray);
+
+let newArray = array.map((ele) => ele * 2);
 console.log(newArray);
