@@ -28,35 +28,55 @@
 
 // Using map function
 
-let stringArray = ["Hello", "bipin", "kxa"];
-let stringLength = stringArray.map((ele) => ele.length);
-console.log(stringLength);
+// let stringArray = ["Hello", "bipin", "kxa"];
+// let stringLength = stringArray.map((ele) => ele.length);
+// console.log(stringLength);
 
-// using for of loop
+// // using for of loop
 
-const findLength = (strings) => {
-  let newArr = [];
-  for (ele of strings) {
-    let element = ele.length;
-    newArr.push(element);
-  }
-  console.log(newArr);
-};
-findLength(["hello", "kxa", "lakkua"]);
+// const findLength = (strings) => {
+//   let newArr = [];
+//   for (ele of strings) {
+//     let element = ele.length;
+//     newArr.push(element);
+//   }
+//   console.log(newArr);
+// };
+// findLength(["hello", "kxa", "lakkua"]);
 
-// Using for loop
-let elementLength = (strings) => {
-  let newArray = [];
-  for (let i = 0; i <= strings.length - 1; i++) {
-    let elements = strings[i];
-    newArray.push(elements.length);
-  }
-  console.log(newArray);
-};
-elementLength(["Hello", "kxa", "Bipin"]);
+// // Using for loop
+// let elementLength = (strings) => {
+//   let newArray = [];
+//   for (let i = 0; i <= strings.length - 1; i++) {
+//     let elements = strings[i];
+//     newArray.push(elements.length);
+//   }
+//   console.log(newArray);
+// };
+// elementLength(["Hello", "kxa", "Bipin"]);
 
 // double element using map function
 
 let numbers = [1, 2, 3, 4];
-let doubleNumbers = numbers.map((ele) => ele * 2);
-console.log(doubleNumbers);
+// let doubleNumbers = numbers.map((ele) => ele * 2);
+// console.log(doubleNumbers);
+
+const doubleNum = (arr) => {
+  let newArr = [];
+  for (let i = 0; i <= arr.length - 1; i++) {
+    let element = arr[i];
+    let double = element + element;
+    newArr.push(double);
+  }
+  console.log(newArr);
+};
+doubleNum(numbers);
+
+// const doubleNumber = (arr) => {
+//   let newArr = [];
+//   for (ele of arr) {
+//     newArr.push(ele * 2);
+//   }
+//   console.log(newArr);
+// };
+// doubleNumber(numbers);
