@@ -176,15 +176,32 @@
 
 let words = ["elephant", "tiger", "Bipin", "Hello"];
 
-const capitalWords = (arr) => {
-  let newArr = [];
-  for (let i = 0; i <= arr.length - 1; i++) {
-    let capital = arr[i];
-    let capitalize = capital[0].charAt(0).toUpperCase() + capital.slice(1);
-    newArr.push(capitalize);
-    // console.log(capitalize);
-    // console.log(capital);
-  }
-  console.log(newArr);
-};
-capitalWords(words);
+// const capitalWords = (arr) => {
+//   let newArr = [];
+//   for (let i = 0; i <= arr.length - 1; i++) {
+//     let capital = arr[i];
+//     let capitalize = capital[0].charAt(0).toUpperCase() + capital.slice(1);
+//     newArr.push(capitalize);
+//     // console.log(capitalize);
+//     // console.log(capital);
+//   }
+//   console.log(newArr);
+// };
+// capitalWords(words);
+
+// const capitalFirstWords = (arr) => {
+//   let newArray = [];
+//   for (let words of arr) {
+//     let capital = words;
+//     let capitalize = capital[0].charAt(0).toUpperCase() + capital.slice(1);
+//     // console.log(capitalize);
+//     newArray.push(capitalize);
+//   }
+//   console.log(newArray);
+// };
+// capitalFirstWords(words);
+
+let newWords = words.map(
+  (words) => words[0].charAt(0).toUpperCase() + words.slice(1)
+);
+console.log(newWords);
