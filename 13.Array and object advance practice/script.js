@@ -183,14 +183,20 @@ const data = [
   },
 ];
 
-console.log(data[0].Education.secondary);
+// Getting religion:
+let ReligionOfBrazil = data[0]["Religion"][0]["population"]["major_areas"][0];
+console.log(ReligionOfBrazil);
 
-console.log(`I have the data of ${data[0].Religion[0].speak[1][0]} countries
+// console.log(data[0].Education.secondary);
+
+console.log(data[0].Religion[0].religion);
+
+console.log(`I have the data of ${ReligionOfBrazil[0].speak[1][0]} countries
  ${data[0].country}:
-I will talk about ${data[0].Religion[0].speak[1][0]} religions. They are ${data[0].Religion[0].religion},${data[0].Religion[1].religion},${data[0].Religion[2].religion}.
-The percantage of people who speak ${data[0].Religion[0].speak[0]} is ${data[0].Religion[0].population.percentage}
-The carnival is celeberated by ${data[0].Religion[0].speak[1][0]} to ${data[0].Religion[0].speak[1][1]} people.
-The major area where ${data[0].Religion[0].religion} is done is ${data[0].Religion[0].population.major_areas[0]} and ${data[0].Religion[0].population.major_areas[1]}
+I will talk about ${ReligionOfBrazil[0].speak[1][0]} religions. They are ${ReligionOfBrazil[0].religion},${ReligionOfBrazil[1].religion},${ReligionOfBrazil[2].religion}.
+The percantage of people who speak ${ReligionOfBrazil[0].speak[0]} is ${ReligionOfBrazil[0].population.percentage}
+The carnival is celeberated by ${ReligionOfBrazil[0].speak[1][0]} to ${ReligionOfBrazil[0].speak[1][1]} people.
+The major area where ${ReligionOfBrazil[0].religion} is done is ${data[0].Religion[0].population.major_areas[0]} and ${data[0].Religion[0].population.major_areas[1]}
 another language is ${data[0].Religion[1].speak[2]}, major cities are ${data[0].Religion[1].population.major_areas[0]} and ${data[0].Religion[1].population.major_areas[1]},
 percentage covered is ${data[0].Religion[1].population.percentage}, another religion is ${data[0].Religion[2].religion} and major centeres are ${data[0].Religion[1].speak[1][0]} and capacity 
 for ${data[0].Religion[2].speak[1].centers[0].name} is ${data[0].Religion[2].speak[1].centers[0].capacity} and ${data[0].Religion[2].speak[1].centers[1].name} is 

@@ -201,7 +201,42 @@ let words = ["elephant", "tiger", "Bipin", "Hello"];
 // };
 // capitalFirstWords(words);
 
-let newWords = words.map(
-  (words) => words[0].charAt(0).toUpperCase() + words.slice(1)
-);
-console.log(newWords);
+// let newWords = words.map(
+//   (words) => words[0].charAt(0).toUpperCase() + words.slice(1)
+// );
+// console.log(newWords);
+
+// sum of each array using for loop
+
+// let sumOfEachArray = (arr) => {
+//   let newArray = [];
+//   for (let subArray of arr) {
+//     let sum = 0;
+//     for (let num of subArray) {
+//       sum += num;
+//     }
+//     newArray.push(sum);
+//   }
+//   console.log(newArray);
+// };
+
+// sumOfEachArray(arrayOfArray);
+
+// using map
+
+let arrayOfArray = [
+  [2, 4],
+  [3, 5],
+  [6, 7],
+];
+
+let newArray = arrayOfArray.map((ele) => {
+  let sum = 0;
+  ele.map((num) => {
+    sum += num;
+  });
+  return sum;
+  // return sum.reduce(ele, (acc) => ele + acc, 0);
+});
+
+console.log(newArray);
