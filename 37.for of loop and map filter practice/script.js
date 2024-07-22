@@ -157,19 +157,34 @@
 // let newNumber = number.map((number) => number + 5);
 // console.log(newNumber);
 
-let number = 6789;
+// let number = 6789;
 
-const reverseNumber = (num) => {
-  let stringNumber = num.toString();
-  // console.log(typeof stringNumber);
-  let reversed = "";
+// const reverseNumber = (num) => {
+//   let stringNumber = num.toString();
+//   // console.log(typeof stringNumber);
+//   let reversed = "";
 
-  for (let i = stringNumber.length - 1; i >= 0; i--) {
-    let remainder = num % 10;
-    reversed = reversed + remainder;
-    num = parseInt(num / 10);
+//   for (let i = stringNumber.length - 1; i >= 0; i--) {
+//     let remainder = num % 10;
+//     reversed = reversed + remainder;
+//     num = parseInt(num / 10);
+//   }
+//   console.log(reversed);
+// };
+
+// reverseNumber(number);
+
+let words = ["elephant", "tiger", "Bipin", "Hello"];
+
+const capitalWords = (arr) => {
+  let newArr = [];
+  for (let i = 0; i <= arr.length - 1; i++) {
+    let capital = arr[i];
+    let capitalize = capital[0].charAt(0).toUpperCase() + capital.slice(1);
+    newArr.push(capitalize);
+    // console.log(capitalize);
+    // console.log(capital);
   }
-  console.log(reversed);
+  console.log(newArr);
 };
-
-reverseNumber(number);
+capitalWords(words);
