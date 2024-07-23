@@ -10,4 +10,6 @@ const carModels = {
 };
 carModels.autoMode = "yes";
 // delete carModels.fourWheels;
-console.log(carModels.fourWheels);
+for (let key in carModels) {
+  console.log(key + ":" + carModels[key]);
+}
