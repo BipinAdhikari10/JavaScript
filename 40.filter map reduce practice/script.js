@@ -20,14 +20,18 @@
 // let dataResult = data.filter((val) => val.position === "developer");
 // console.log(dataResult);
 
-let ages = [10, 20, 30];
-let result = ages.filter(checkAdult);
-console.log(result);
+// let ages = [10, 20, 30];
+// let result = ages.filter(checkAdult);
+// console.log(result);
 
-function checkAdult(age) {
-  return age > 18;
-}
+// function checkAdult(age) {
+//   return age > 18;
+// }
 
-const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10];
-const evenNumbers = numbers.filter((ele) => ele % 2 === 0);
-console.log(evenNumbers);
+// const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const evenNumbers = numbers.filter((ele) => ele % 2 === 0);
+// console.log(evenNumbers);
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+oddNumbers = numbers.filter((ele) => ele % 2 !== 0);
+console.log(oddNumbers);
