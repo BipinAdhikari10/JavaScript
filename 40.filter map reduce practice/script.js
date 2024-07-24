@@ -90,8 +90,12 @@
 // }, 0);
 // console.log(result);
 
-let arr = [1, 2, 3, 4];
-let resultArr = arr.reduce((ele, acc) => {
-  return ele * acc;
-}, 1);
-console.log(resultArr);
+// let arr = [1, 2, 3, 4];
+// let resultArr = arr.reduce((ele, acc) => {
+//   return ele * acc;
+// }, 1);
+// console.log(resultArr);
+
+const numbers = [4, 16, 9, 36, 25, 64];
+let result = numbers.map(Math.sqrt);
+console.log(result);
