@@ -23,6 +23,7 @@ const bikeModels = {
 };
 bikeModels.bikeName = "Fz";
 bikeModels.cc = 149;
+bikeModels.color = "red";
 
 for (let key in bikeModels) {
   console.log(key + ":" + bikeModels[key]);
