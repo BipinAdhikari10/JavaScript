@@ -96,6 +96,41 @@
 // }, 1);
 // console.log(resultArr);
 
-const numbers = [4, 16, 9, 36, 25, 64];
-let result = numbers.map(Math.sqrt);
+// const numbers = [4, 16, 9, 36, 25, 64];
+// let result = numbers.map(Math.sqrt);
+// console.log(result);
+
+// const numbers = [2, 4, 6, 8, 10];
+// let result = numbers.map((ele) => ele * 10);
+// console.log(result);
+
+// const person = [
+//   {
+//     id: 1,
+//     name: "Bipin",
+//   },
+//   {
+//     id: 2,
+//     name: "Bipi",
+//   },
+// ];
+// const result = person.map((ele) => {
+//   return ele.id;
+// });
+// console.log(result);
+
+// function myFunction(num) {
+//   return num * 10;
+// }
+
+// const numbers = [65, 44, 12, 4];
+// const newArr = numbers.map(myFunction);
+
+// console.log(newArr);
+
+const doubleNum = (arr) => {
+  return arr * 2;
+};
+let array = [2, 4, 6, 8, 10];
+let result = array.map(doubleNum);
 console.log(result);
