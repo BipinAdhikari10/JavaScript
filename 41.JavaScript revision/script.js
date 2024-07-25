@@ -155,5 +155,36 @@ const students = [
     age: 18,
   },
 ];
-let findAge = students.map((students) => students.occupation);
+let findAge = students.map((students) => students.name);
 console.log(findAge);
+
+// data of vehicle
+
+const vehicles = [
+  {
+    name: "Tesla",
+    model: 2020,
+  },
+  {
+    name: "bmw",
+    model: 2021,
+  },
+  {
+    name: "byd",
+    model: 2024,
+  },
+  {
+    name: "byd",
+    model: 2016,
+  },
+  {
+    name: "byd",
+    model: 2018,
+  },
+  {
+    name: "byd",
+    model: 2023,
+  },
+];
+let vehiclesModels = vehicles.map((vehicles) => vehicles.model);
+console.log(vehiclesModels);
