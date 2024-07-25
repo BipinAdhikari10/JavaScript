@@ -188,3 +188,7 @@ const vehicles = [
 ];
 let vehiclesModels = vehicles.map((vehicles) => vehicles.model);
 console.log(vehiclesModels);
+
+let name = ["bipin", "hari", "ramkanta"];
+let upperName = name.map((ele) => ele.charAt(0).toUpperCase() + ele.slice(1));
+console.log(upperName);
