@@ -117,14 +117,43 @@
 // );
 // console.log(newModels);
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-let sumOfNum = numbers.reduce((ele, acc) => {
-  return ele + acc;
-}, 0);
-console.log(sumOfNum);
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let sumOfNum = numbers.reduce((ele, acc) => {
+//   return ele + acc;
+// }, 0);
+// console.log(sumOfNum);
 
-let array = [2, 3, 4, 5];
-let product = array.reduce((ele, acc) => {
-  return ele * acc;
-}, 1);
-console.log(product);
+// let array = [2, 3, 4, 5];
+// let product = array.reduce((ele, acc) => {
+//   return ele * acc;
+// }, 1);
+// console.log(product);
+
+const students = [
+  {
+    id: 1,
+    name: "ramu",
+    occupation: "farmer",
+    age: 20,
+  },
+  {
+    id: 2,
+    name: "ramu",
+    occupation: "farmer",
+    age: 23,
+  },
+  {
+    id: 3,
+    name: "ramu",
+    occupation: "rider",
+    age: 25,
+  },
+  {
+    id: 4,
+    name: "shyam",
+    occupation: "driver",
+    age: 18,
+  },
+];
+let findAge = students.map((students) => students.occupation);
+console.log(findAge);
