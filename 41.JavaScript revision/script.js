@@ -192,3 +192,21 @@ console.log(vehiclesModels);
 let name = ["bipin", "hari", "ramkanta"];
 let upperName = name.map((ele) => ele.charAt(0).toUpperCase() + ele.slice(1));
 console.log(upperName);
+
+// increasement with index
+
+// result[1,3,5,7,9,15]
+// let result = numbers.map((ele, index) => ele + index);
+// console.log(result);
+
+// const increaseIndex = (arr) => {
+//   let newArr = [];
+//   for (let i = 0; i <= arr.length - 1; i++) {
+//     newArr.push(arr[i] + i);
+//   }
+//   console.log(newArr);
+// };
+// increaseIndex(numbers);
+let numbers = [1, 2, 3, 4, 5, 6, 7];
+let increasedIndex = numbers.map((ele, index) => ele + index);
+console.log(increasedIndex);
