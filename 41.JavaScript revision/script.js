@@ -39,5 +39,15 @@
 // console.log(fruits);
 
 let vehicles = ["car", "van", "bus", "truck"];
-let remove = vehicles.slice(1, 3);
+let remove = vehicles.slice(0, 1);
 console.log(remove);
+
+// square a number using map
+
+let numbers = [2, 4, 6, 8];
+let square = numbers.map((ele) => ele * ele);
+console.log(square);
+
+let array = [25, 64];
+let arr = array.map(Math.sqrt);
+console.log(arr);
