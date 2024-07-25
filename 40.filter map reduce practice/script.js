@@ -132,5 +132,7 @@ const doubleNum = (arr) => {
   return arr * 2;
 };
 let array = [2, 4, 6, 8, 10];
-let result = array.map(doubleNum);
+let result = array.map((ele) => {
+  return ele * 2;
+});
 console.log(result);
