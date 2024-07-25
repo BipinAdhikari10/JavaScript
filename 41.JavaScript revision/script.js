@@ -38,16 +38,57 @@
 // console.log(remove);
 // console.log(fruits);
 
-let vehicles = ["car", "van", "bus", "truck"];
-let remove = vehicles.slice(0, 1);
-console.log(remove);
+// let vehicles = ["car", "van", "bus", "truck"];
+// let remove = vehicles.slice(0, 1);
+// console.log(remove);
 
-// square a number using map
+// // square a number using map
 
-let numbers = [2, 4, 6, 8];
-let square = numbers.map((ele) => ele * ele);
-console.log(square);
+// let numbers = [2, 4, 6, 8];
+// let square = numbers.map((ele) => ele * ele);
+// console.log(square);
 
-let array = [25, 64];
-let arr = array.map(Math.sqrt);
-console.log(arr);
+// let array = [25, 64];
+// let arr = array.map(Math.sqrt);
+// console.log(arr);
+
+// let girls = [
+//   {
+//     name: "ramkali",
+//     age: 20,
+//   },
+//   {
+//     name: "harikali",
+//     age: 21,
+//   },
+// ];
+// // let findAge = girls.map((ele) => ele.age);
+// // console.log(findAge);
+
+// for (let key in girls) {
+//   console.log(key + ":" + girls[key]);
+// }
+
+// let girls = {
+//   name: "ramkali",
+//   age: 20,
+//   id: 2,
+// };
+// for (let key in girls) {
+//   console.log(key + ":" + girls[key]);
+// }
+
+let job = [
+  {
+    name: "Bipin",
+    age: 20,
+    occupation: "programmer",
+  },
+  {
+    name: "Hari",
+    age: "21",
+    occupation: "driver",
+  },
+];
+let result = job.filter((ele) => ele.occupation === "driver");
+console.log(result);
