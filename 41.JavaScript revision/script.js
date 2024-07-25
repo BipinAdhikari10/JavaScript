@@ -210,3 +210,22 @@ console.log(upperName);
 let numbers = [1, 2, 3, 4, 5, 6, 7];
 let increasedIndex = numbers.map((ele, index) => ele + index);
 console.log(increasedIndex);
+
+const data = [
+  {
+    firstName: "Bipin",
+    lastName: "Adhikari",
+  },
+  {
+    firstName: "Ramkanta",
+    lastName: "kafle",
+  },
+  {
+    firstName: "Ramlal",
+    lastName: "luitel",
+  },
+];
+let fullName = data.map((ele) => {
+  return `${ele.firstName},${ele.lastName}`;
+});
+console.log(fullName);
