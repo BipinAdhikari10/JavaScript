@@ -1,8 +1,34 @@
-const number = [1, 2, 3, 4, 5];
-let removedNumber = number.pop();
-console.log(removedNumber);
-console.log(number);
+// const number = [1, 2, 3, 4, 5];
+// let removedNumber = number.pop();
+// console.log(removedNumber);
+// console.log(number);
 
-const fruits = ["apple", "banana", "cherry"];
-let removedFruits = fruits.splice(1, 2);
-console.log(removedFruits);
+// // delete elements
+// const fruits = ["apple", "banana", "cherry"];
+// let removedFruits = fruits.splice(1, 2);
+// console.log(removedFruits);
+
+// // adding elements
+// let animals = ["cat", "dog", "tiger"];
+// let addAnimals = animals.splice(1, 0, "elephant");
+// console.log(addAnimals);
+// console.log(animals);
+
+// add elements
+let fruits = ["apple", "banana", "mango"];
+let addFruits = fruits.splice(2, 0, "cherry", "pear");
+console.log(addFruits);
+console.log(fruits);
+
+// remove elements
+
+let animals = ["cat", "dog", "elephant", "lion"];
+let removeAnimals = animals.splice(2, 2);
+console.log(removeAnimals);
+console.log(animals);
+
+// replace elements
+
+let vehicles = ["car", "taxi", "bus"];
+let replaceVehicle = vehicles.splice(1, 1, "bike");
+console.log(vehicles);
