@@ -122,3 +122,9 @@ let sumOfNum = numbers.reduce((ele, acc) => {
   return ele + acc;
 }, 0);
 console.log(sumOfNum);
+
+let array = [2, 3, 4, 5];
+let product = array.reduce((ele, acc) => {
+  return ele * acc;
+}, 1);
+console.log(product);
