@@ -12,23 +12,32 @@
 // let animals = ["cat", "dog", "tiger"];
 // let addAnimals = animals.splice(1, 0, "elephant");
 // console.log(addAnimals);
-// console.log(animals);
+// // console.log(animals);
 
-// add elements
-let fruits = ["apple", "banana", "mango"];
-let addFruits = fruits.splice(2, 0, "cherry", "pear");
-console.log(addFruits);
-console.log(fruits);
+// // add elements
+// let fruits = ["apple", "banana", "mango"];
+// let addFruits = fruits.splice(2, 0, "cherry", "pear");
+// console.log(addFruits);
+// console.log(fruits);
 
 // remove elements
 
-let animals = ["cat", "dog", "elephant", "lion"];
-let removeAnimals = animals.splice(2, 2);
-console.log(removeAnimals);
-console.log(animals);
-
 // replace elements
 
-let vehicles = ["car", "taxi", "bus"];
-let replaceVehicle = vehicles.splice(1, 1, "bike");
-console.log(vehicles);
+// let vehicles = ["car", "taxi", "bus"];
+// let replaceVehicle = vehicles.splice(1, 1, "bike");
+// console.log(vehicles);
+
+// let animals = ["cat", "dog", "elephant", "lion"];
+// let removeAnimals = animals.splice(2,2);
+// console.log(removeAnimals);
+// // console.log(animals);
+
+// const fruits = ["apple", "banana", "mango", "orange", "tesla"];
+// let remove = fruits.splice(2, 1);
+// console.log(remove);
+// console.log(fruits);
+
+let vehicles = ["car", "van", "bus", "truck"];
+let remove = vehicles.slice(1, 3);
+console.log(remove);
