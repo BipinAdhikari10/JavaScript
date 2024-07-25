@@ -92,3 +92,27 @@ let job = [
 ];
 let result = job.filter((ele) => ele.occupation === "driver");
 console.log(result);
+
+let vehicles = [
+  {
+    name: "tesla",
+    year: 2020,
+  },
+  {
+    name: "bmw",
+    year: 2020,
+  },
+  {
+    name: "creta",
+    year: 2021,
+  },
+
+  {
+    name: "polo",
+    year: 2021,
+  },
+];
+let newModels = vehicles.filter(
+  (ele) => ele.year === 2021 && ele.name == "polo"
+);
+console.log(newModels);
