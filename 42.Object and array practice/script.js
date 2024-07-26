@@ -46,7 +46,7 @@
 // console.log(subjectInfo);
 
 const anagram = (str1, str2) => {
-  if (str1.length != str2.length) {
+  if (str1.length !== str2.length) {
     return false;
   }
   let count = {};
@@ -72,4 +72,14 @@ const anagram = (str1, str2) => {
   return true;
 };
 let stringAnagram = anagram("Theeyes", "Theysee");
-console.log(stringAnagram);
+{
+  if (stringAnagram) {
+    console.log("anagram");
+  } else {
+    console.log("not an anagram");
+  }
+}
+
+const characters = ["bipin", "apple", "nall"];
+let result = characters.sort().reverse();
+console.log(result);
