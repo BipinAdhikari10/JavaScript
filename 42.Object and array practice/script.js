@@ -84,15 +84,30 @@
 // let result = characters.sort().reverse();
 // console.log(result);
 
-const isAnagram = (str1, str2) => {
-  let sortedStr1 = str1.toLowerCase().split("").sort().join("");
-  let sortedStr2 = str2.toLowerCase().split("").sort().join("");
-  return sortedStr1 === sortedStr2;
-};
+// const checkAnagram = (str1, str2) => {
+//   let sortedStr1 = str1.toLowerCase().split("").sort().join("");
+//   console.log(sortedStr1);
+//   let sortedStr2 = str2.toLowerCase().split("").sort().join("");
+//   return sortedStr1 === sortedStr2;
+// };
 
-let booleanValue = isAnagram("Listen", "Silent");
-if (booleanValue) {
-  console.log("The given strings are anagrams");
+// let booleanValue = checkAnagram("Listen", "Silent");
+// if (booleanValue) {
+//   console.log("The given strings are anagrams");
+// } else {
+//   console.log("The given strings are not anagram");
+// }
+const checkAnagram = (str1, str2) => {
+  function sortString(str) {
+    return str.toLowerCase().split("").sort().join("");
+  }
+  let string1 = sortString(str1);
+  let string2 = sortString(str2);
+  return string1 === string2;
+};
+let isAnagram = checkAnagram("TheEyes", "TheySee");
+if (isAnagram) {
+  console.log("anagram");
 } else {
-  console.log("The given strings are not anagram");
+  console.log("This are not anagram");
 }
