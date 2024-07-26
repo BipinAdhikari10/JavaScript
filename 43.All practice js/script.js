@@ -82,17 +82,25 @@
 // };
 // reverseElement(array);
 
-let array = ["dog", "cat", "tiger"];
+// let array = ["dog", "cat", "tiger"];
 
-const revverseElement = (arr) => {
-  arr.reverse();
-  let newArr = [];
-  for (let i = 0; i <= arr.length - 1; i++) {
-    let element = arr[i];
-    let reverseString = element.split("").reverse().join("");
-    // console.log(reverseString);
-    newArr.push(reverseString);
+// const revverseElement = (arr) => {
+//   arr.reverse();
+//   let newArr = [];
+//   for (let i = 0; i <= arr.length - 1; i++) {
+//     let element = arr[i];
+//     let reverseString = element.split("").reverse().join("");
+//     // console.log(reverseString);
+//     newArr.push(reverseString);
+//   }
+//   console.log(newArr);
+// };
+// revverseElement(array);
+
+const printMultipy = (num) => {
+  for (let i = 1; i <= num; i++) {
+    console.log(`The multiplaction table of ${i} is`);
+    for (let j = 1; j <= 10; j++) console.log(`${i}*${j}=${i * j}`);
   }
-  console.log(newArr);
 };
-revverseElement(array);
+printMultipy(10);
