@@ -97,10 +97,29 @@
 // };
 // revverseElement(array);
 
-const printMultipy = (num) => {
-  for (let i = 1; i <= num; i++) {
-    console.log(`The multiplaction table of ${i} is`);
-    for (let j = 1; j <= 10; j++) console.log(`${i}*${j}=${i * j}`);
-  }
+// const printMultipy = (num) => {
+//   for (let i = 1; i <= num; i++) {
+//     console.log(`The multiplaction table of ${i} is`);
+//     for (let j = 1; j <= 10; j++) console.log(`${i}*${j}=${i * j}`);
+//   }
+// };
+// printMultipy(10);
+// const fruits = ["Banana", "Orange", "Apple", "Mango", "Apple"];
+// let index = fruits.indexOf("Apple", -1);
+// console.log(index);
+
+const arguments = (arr, ele) => {
+  return arr.indexOf(ele);
 };
-printMultipy(10);
+let number = [10, 20, 30, 40, 50, 60];
+let result = arguments(number, 60);
+console.log(result);
+
+const factorialNum = (num) => {
+  let factorial = 1;
+  for (let i = 1; i <= num; i++) {
+    factorial = factorial * i;
+  }
+  console.log(factorial);
+};
+factorialNum(5);
