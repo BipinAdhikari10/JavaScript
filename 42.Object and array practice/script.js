@@ -97,6 +97,21 @@
 // } else {
 //   console.log("The given strings are not anagram");
 // }
+// const checkAnagram = (str1, str2) => {
+//   function sortString(str) {
+//     return str.toLowerCase().split("").sort().join("");
+//   }
+//   let string1 = sortString(str1);
+//   let string2 = sortString(str2);
+//   return string1 === string2;
+// };
+// let isAnagram = checkAnagram("TheEyes", "TheySee");
+// if (isAnagram) {
+//   console.log("anagram");
+// } else {
+//   console.log("This are not anagram");
+// }
+
 const checkAnagram = (str1, str2) => {
   function sortString(str) {
     return str.toLowerCase().split("").sort().join("");
@@ -105,9 +120,9 @@ const checkAnagram = (str1, str2) => {
   let string2 = sortString(str2);
   return string1 === string2;
 };
-let isAnagram = checkAnagram("TheEyes", "TheySee");
+let isAnagram = checkAnagram("dicer", "cider");
 if (isAnagram) {
-  console.log("anagram");
+  console.log("This is an anagram");
 } else {
-  console.log("This are not anagram");
+  console.log("This is not an anagram");
 }
