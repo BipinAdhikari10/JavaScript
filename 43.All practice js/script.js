@@ -40,3 +40,15 @@ const reverseArray = (arr) => {
   console.log(reverse);
 };
 reverseArray([1, 2, 3, 4, 5, 6, 12]);
+
+// reverse element using unshift
+
+let reverseELement = (arr) => {
+  let reverse = [];
+  for (let i = 0; i <= arr.length - 1; i++) {
+    let element = arr[i];
+    reverse.unshift(element);
+  }
+  console.log(reverse);
+};
+reverseELement(["car", "van", "taxi"]);
