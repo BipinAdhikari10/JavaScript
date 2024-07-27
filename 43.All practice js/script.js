@@ -108,18 +108,36 @@
 // let index = fruits.indexOf("Apple", -1);
 // console.log(index);
 
-const arguments = (arr, ele) => {
-  return arr.indexOf(ele);
-};
-let number = [10, 20, 30, 40, 50, 60];
-let result = arguments(number, 60);
-console.log(result);
+// const arguments = (arr, ele) => {
+//   return arr.indexOf(ele);
+// };
+// let number = [10, 20, 30, 40, 50, 60];
+// let result = arguments(number, 60);
+// console.log(result);
 
-const factorialNum = (num) => {
-  let factorial = 1;
-  for (let i = 1; i <= num; i++) {
-    factorial = factorial * i;
-  }
-  console.log(factorial);
-};
-factorialNum(5);
+// const factorialNum = (num) => {
+//   let factorial = 1;
+//   for (let i = 1; i <= num; i++) {
+//     factorial = factorial * i;
+//   }
+//   console.log(factorial);
+// };
+// factorialNum(5);
+
+// let arguments = (arr, ele) => {
+//   let newArr = [];
+//   for (let i = 0; i <= arr.length - 1; i++) {
+//     if (arr[i] === ele) {
+//       newArr.push(indexOf(arr[i]));
+//     }
+//   }
+//   return newArr;
+// };
+
+// let array = [1, 20, 4, 2, 3, 10, 4, 5];
+// let result = arguments(array, 4);
+// console.log(result);
+
+let animals = ["cow", "dog"];
+animals.reverse();
+console.log(animals);
