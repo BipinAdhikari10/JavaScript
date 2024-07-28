@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-color: #ddd;
+  /* border: 2px solid red; */
+}
+table {
+  /* border: 2px solid red; */
+  /* margin-top: 50px; */
+  width: 30% !important;
+  margin-top: 80px;
+  margin-left: 150px;
+}
