@@ -19,7 +19,7 @@ console.log(dataInformation);
 
 function displayData() {
   let tableBody = document.getElementById("table-body");
-  console.log(tableBody);
+  //   console.log(tableBody);
   let html = "";
   dataInformation.forEach(function (element, index) {
     html += ` <tr id="table-row">
@@ -33,7 +33,11 @@ function displayData() {
           </td>
         </tr>`;
   });
-  tableBody.innerHTML = html;
+  if (dataInformation.length < 1) {
+    tableBody.innerText = "No data found";
+  } else {
+    tableBody.innerHTML = html;
+  }
 }
 displayData();
 
@@ -42,5 +46,7 @@ function editInfo(index) {
 }
 
 function deleteInfo(index) {
-  console.log(`You are deleting data of`, index);
+  //   console.log(`You are deleting data of`, index);
+  dataInformation.splice(index, 1);
+  displayData();
 }
