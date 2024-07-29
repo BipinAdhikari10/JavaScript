@@ -185,74 +185,80 @@
 //     name: "byd",
 //     model: 2023,
 //   },
-// ];
-// let vehiclesModels = vehicles.map((vehicles) => vehicles.model);
-// console.log(vehiclesModels);
+// // ];
+// // let vehiclesModels = vehicles.map((vehicles) => vehicles.model);
+// // console.log(vehiclesModels);
 
-// let name = ["bipin", "hari", "ramkanta"];
-// let upperName = name.map((ele) => ele.charAt(0).toUpperCase() + ele.slice(1));
-// console.log(upperName);
+// // let name = ["bipin", "hari", "ramkanta"];
+// // let upperName = name.map((ele) => ele.charAt(0).toUpperCase() + ele.slice(1));
+// // console.log(upperName);
 
-// increasement with index
+// // increasement with index
 
-// result[1,3,5,7,9,15]
-// let result = numbers.map((ele, index) => ele + index);
-// console.log(result);
+// // result[1,3,5,7,9,15]
+// // let result = numbers.map((ele, index) => ele + index);
+// // console.log(result);
 
-// const increaseIndex = (arr) => {
-//   let newArr = [];
-//   for (let i = 0; i <= arr.length - 1; i++) {
-//     newArr.push(arr[i] + i);
-//   }
-//   console.log(newArr);
-// };
-// increaseIndex(numbers);
-// let numbers = [1, 2, 3, 4, 5, 6, 7];
-// let increasedIndex = numbers.map((ele, index) => ele + index);
-// console.log(increasedIndex);
+// // const increaseIndex = (arr) => {
+// //   let newArr = [];
+// //   for (let i = 0; i <= arr.length - 1; i++) {
+// //     newArr.push(arr[i] + i);
+// //   }
+// //   console.log(newArr);
+// // };
+// // increaseIndex(numbers);
+// // let numbers = [1, 2, 3, 4, 5, 6, 7];
+// // let increasedIndex = numbers.map((ele, index) => ele + index);
+// // console.log(increasedIndex);
+
+// // const data = [
+// //   {
+// //     firstName: "Bipin",
+// //     lastName: "Adhikari",
+// //   },
+// //   {
+// //     firstName: "Ramkanta",
+// //     lastName: "kafle",
+// //   },
+// //   {
+// //     firstName: "Ramlal",
+// //     lastName: "luitel",
+// //   },
+// // ];
+// // let fullName = data.map((ele) => {
+// //   return `${ele.firstName},${ele.lastName}`;
+// // });
+// // console.log(fullName);
 
 // const data = [
 //   {
 //     firstName: "Bipin",
 //     lastName: "Adhikari",
+//     age: 23,
 //   },
 //   {
-//     firstName: "Ramkanta",
-//     lastName: "kafle",
+//     firstName: "Bipin",
+//     lastName: "Adhikari",
+//     age: 23,
 //   },
 //   {
-//     firstName: "Ramlal",
-//     lastName: "luitel",
+//     firstName: "Bipin",
+//     lastName: "Adhikari",
+//     age: 23,
+//   },
+//   {
+//     firstName: "Bipin",
+//     lastName: "Adhikari",
+//     age: 23,
 //   },
 // ];
 // let fullName = data.map((ele) => {
-//   return `${ele.firstName},${ele.lastName}`;
+//   return `${ele.firstName},${ele.lastName},${ele.age}`;
 // });
 // console.log(fullName);
 
-const data = [
-  {
-    firstName: "Bipin",
-    lastName: "Adhikari",
-    age: 23,
-  },
-  {
-    firstName: "Bipin",
-    lastName: "Adhikari",
-    age: 23,
-  },
-  {
-    firstName: "Bipin",
-    lastName: "Adhikari",
-    age: 23,
-  },
-  {
-    firstName: "Bipin",
-    lastName: "Adhikari",
-    age: 23,
-  },
-];
-let fullName = data.map((ele) => {
-  return `${ele.firstName},${ele.lastName},${ele.age}`;
-});
-console.log(fullName);
+
+function truncate(str, maxlength) {
+  return (str.length > maxlength) ?
+    str.slice(0, maxlength - 1) + '…' : str;
+}

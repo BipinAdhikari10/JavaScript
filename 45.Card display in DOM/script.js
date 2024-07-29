@@ -1,5 +1,5 @@
 let data = [];
-fetch("https://fakestoreapi.com/products?limit=5")
+fetch("https://fakestoreapi.com/products")
   .then(function (response) {
     return response.json();
   })
@@ -24,9 +24,15 @@ function displayData(data) {
           alt="..."
         />
         <div class="card-body">
-          <p style="font-size: 22px; font-weight: 600">${element.title}</p>
+          <p style="font-size: 22px; font-weight: 600">${
+            element.title.slice(0, 30) + "......."
+          }</p>
           <p class="card-text">
-         ${element.description.slice(0, 90)}
+         ${
+           element.description.slice(0, 90) +
+           "     " +
+           "<span class='text-primary'>See More...</span>"
+         }
           </p>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
