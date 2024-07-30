@@ -26,3 +26,8 @@ body {
 #card img {
   width: 250px;
 }
+.select-container {
+  border: 2px solid red;
+  width: 20%;
+  margin-left: 4px auto;
+}

@@ -1,14 +1,15 @@
 let submitButton = document.getElementById("limit-button");
 let limit = document.getElementById("limit-input");
-console.log(limit);
+// console.log(limit);
 submitButton.addEventListener("click", (event) => {
   event.preventDefault();
   let limitInput = limit.value;
-  console.log(limitInput);
-  limitInputData(limitInput);
+  // console.log(limitInput);
+  getProductData(limitInput);
+  limit.value = "";
 });
 
-function limitInputData(limit) {
+function getProductData(limit) {
   let data = [];
   fetch(`https://fakestoreapi.com/products?limit=${limit}`)
     .then(function (response) {
@@ -23,6 +24,7 @@ function limitInputData(limit) {
       console.log(error);
     });
   displayData(data);
+
   // console.log(data);
 }
 
@@ -73,3 +75,23 @@ function deleteInfo(index) {
   data.splice(index, 1);
   displayData(data);
 }
+
+let categories = [
+  "electronics",
+  "jewelery",
+  "men's clothing",
+  "women's clothing",
+];
+
+let formSelect = document.getElementById("form-select");
+console.log(formSelect);
+function getCategory() {
+  fetch("https://fakestoreapi.com/products/categories")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (json) {
+      console.log(json);
+    });
+}
+getCategory();
