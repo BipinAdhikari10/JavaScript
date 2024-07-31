@@ -14,38 +14,49 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <h1 class="text-center">My backend fetched data</h1>
-    <form class="container" action="submit.php">
-      <input class="limit" id="limit" type="text" />
-      <button class="btn btn-success" id="success">Submit</button>
-    </form>
-    <div class="card-container d-flex" id="card-container">
-      <div class="card" style="width: 18rem">
+    <h1 class="text-center mt-4">My backend fetched data</h1>
+    <div class="text-center">
+      <form action="noaction.php">
+        <input type="text" placeholder="Enter the limit" id="limit" />
+        <button type="submit" id="submit-button" class="btn btn-primary">
+          Add Limit
+        </button>
+      </form>
+    </div>
+    <div class="card-container" id="card-container">
+      <div id="card" style="width: 18rem">
         <img
           src="https://images.unsplash.com/photo-1719937206255-cc337bccfc7d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           class="card-img-top"
           alt="..."
         />
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
+          <p style="font-size: 22px; font-weight: 600">Title</p>
+          <p id="card-text">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
-          <p class="description">Description :Hello k xa</p>
-          <p class="price"><strong>Price:</strong> 111</p>
-          <p class="category"><strong>Category:</strong> Shoes</p>
-          <p class="rating">
-            <strong>Rating:</strong> 100 of 120 and 500 of 249
-          </p>
-          <div class="btn-container">
-            <button class="btn btn-primary">Details</button>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <span style="font-weight: 600">Category:</span>
+              Men's clothing
+            </li>
+            <li class="list-group-item">
+              <span style="font-weight: 600">Price:</span>
+              Rs.1000
+            </li>
+            <li class="list-group-item">
+              <span style="font-weight: 600">Rating:</span>
+              3.9 of 120
+            </li>
+          </ul>
+          <div class="mt-2 d-flex justify-content-center" style="gap: 40px">
+            <button class="btn btn-primary">Edit</button>
             <button class="btn btn-danger">Delete</button>
           </div>
         </div>
       </div>
     </div>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

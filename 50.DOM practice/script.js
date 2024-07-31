@@ -14,15 +14,27 @@ let data = [
   },
 ];
 
-function getData() {
-  let url = `https://fakestoreapi.com/products`;
+let inputData = document.getElementById("limit");
+// console.log(inputData);
+let submitButton = document.getElementById("success");
+submitButton.addEventListener("submit", function (event) {
+  event.preventDefault();
+  inputData = inputData.value;
+  // console.log(inputData);
+
+  getData(inputData);
+  inputData.value = "";
+});
+
+function getData(limit) {
+  let url = `https://fakestoreapi.com/products?limit=${limit}`;
   fetch(url)
     .then(function (response) {
       return response.json();
     })
     .then(function (json) {
-      console.log(json);
-      displayData();
+      // console.log(json);
+      data.push(...json);
     })
     .catch(function (error) {
       console.log(error);
