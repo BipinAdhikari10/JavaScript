@@ -78,37 +78,30 @@ let dataInformation = [
   },
 ];
 
-function tableDisplay() {
+displayData();
+function displayData() {
   let tableBody = document.getElementById("table-body");
-  // console.log(tableBody);
-
-  let html = "";
+  console.log(tableBody);
+  let myData = "";
   dataInformation.forEach(function (element, index) {
-    html += `  <tr id="table-row">
+    myData += ` <tr id="table-row">
           <th>${index + 1}</th>
           <td>${element.name}</td>
           <td>${element.age}</td>
           <td>${element.city}</td>
           <td>
-            <button class="btn btn-primary" onClick='editInformation(${index})'>Edit</button>
-            <button class="btn btn-danger" onClick=deleteInformation(${index})>Delete</button>
+            <button class="btn btn-primary"onCLick='EditInfo(${index})'>Add</button>
+            <button class="btn btn-danger"onClick='deleteInfo(${index})'>Delete</button>
           </td>
         </tr>`;
   });
-  // tableBody.innerHTML = html;
-  if (dataInformation.length < 1) {
-    tableBody.innerText = "No data found";
-  } else {
-    tableBody.innerHTML = html;
-  }
+  tableBody.innerHTML = myData;
+}
+function editInfo(index) {
+  console.log("This helps us to edit index", index);
 }
 
-tableDisplay();
-function editInformation(index) {
-  console.log("This help to edit index", index);
-}
-
-function deleteInformation(index) {
+function deleteInfo(index) {
   dataInformation.splice(index, 1);
-  tableDisplay();
+  displayData();
 }

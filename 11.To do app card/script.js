@@ -27,7 +27,7 @@ personalForm.addEventListener("submit", (event) => {
     value: "THis is value",
   };
   if (edit_index != null) {
-    console.log(edit_index);
+    // console.log(edit_index);
     personalFormArray.splice(edit_index, 1, submitForm);
     edit_index = null;
   } else {
@@ -44,12 +44,13 @@ function displayCard() {
     html += `<div class="card" id="card" style="width: 18rem">
         <div class="card-body">
           <h5 class="card-title">My Message</h5>
-          <p class="card-text">${user.message}</p>
+       
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">Name: ${user.name}</li>
           <li class="list-group-item">Adddress: ${user.address}</li>
           <li class="list-group-item">Phone Number: ${user.phone}</li>
+             <p class="card-text">${user.message}</p>
           <li class="button-container d-flex p-2" style="gap: 10px">
             <button class="btn btn-primary w-50" onclick='editInformation(${index})'>Edit</button>
             <button class="btn btn-danger w-50" onclick='deleteInformation(${index})'>Delete</button>

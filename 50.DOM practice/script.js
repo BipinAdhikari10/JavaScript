@@ -14,6 +14,22 @@ let data = [
   },
 ];
 
+function getData() {
+  let url = `https://fakestoreapi.com/products`;
+  fetch(url)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (json) {
+      console.log(json);
+      displayData();
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+getData();
+
 function displayData() {
   let cardData = document.getElementById("card-container");
   //   console.log(cardData);
