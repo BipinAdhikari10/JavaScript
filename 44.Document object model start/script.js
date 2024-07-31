@@ -95,7 +95,12 @@ function displayData() {
           </td>
         </tr>`;
   });
-  tableBody.innerHTML = myData;
+
+  if (dataInformation.length < 1) {
+    tableBody.innerText = "NO data found";
+  } else {
+    tableBody.innerHTML = myData;
+  }
 }
 function editInfo(index) {
   console.log("This helps us to edit index", index);
