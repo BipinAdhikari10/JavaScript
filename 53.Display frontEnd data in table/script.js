@@ -1,25 +1,12 @@
-let data = [
-  {
-    name: "Bipin",
-    age: 23,
-    address: "Galyang",
-  },
-  //   {
-  //     name: "Shiva",
-  //     age: 27,
-  //     address: "Kathmandu",
-  //   },
-  //   {
-  //     name: "Ram",
-  //     age: 23,
-  //     address: "Dhangadhi",
-  //   },
-  //   {
-  //     name: "Ramkanta",
-  //     age: 29,
-  //     address: "Pokhara",
-  //   },
-];
+let data;
+
+let myData = localStorage.getItem("myData");
+
+if (myData !== null) {
+  data = JSON.parse(myData);
+} else {
+  data = [];
+}
 
 let form = document.getElementById("form-data");
 let buttonElement = document.getElementById("submit-btn");
@@ -42,9 +29,9 @@ form.addEventListener("submit", function (event) {
   let userNameValue = inputName.value;
   let userAddress = inputAddress.value;
   let userAge = inputAge.value;
-  console.log(edit_index);
+  // console.log(edit_index);
+
   if (edit_index !== null) {
-    console.log("Editing case");
     data.splice(edit_index, 1, {
       name: userNameValue,
       address: userAddress,
@@ -57,7 +44,8 @@ form.addEventListener("submit", function (event) {
   }
 
   displayData();
-
+  // Set data in localStorage
+  localStorage.setItem("myData", JSON.stringify(data));
   resetValue();
 });
 
@@ -71,17 +59,27 @@ function displayData() {
             <td>${element.name}</td>
             <td>${element.age}</td>
             <td>${element.address}</td>
+           <td>${
+             element.age > 18
+               ? "<span  class='badge text-bg-success'>Important </span>"
+               : "<p>Cannot Vote</p>"
+           }</td>
             <td><button class='btn btn-primary' onClick='editInfo(${index})'>Edit</button>
             <button class='btn btn-danger' onClick='deleteInfo(${index})'>Delete</button></td>
           </tr>
          `;
   });
-  tableBody.innerHTML = html;
+  if (data.length < 1) {
+    tableBody.innerHTML = "<p>No data Found</p>";
+  } else {
+    tableBody.innerHTML = html;
+  }
 }
 displayData();
 
 function deleteInfo(id) {
   data.splice(id, 1);
+  localStorage.setItem("myData", JSON.stringify(data));
   displayData();
 }
 function editInfo(index) {

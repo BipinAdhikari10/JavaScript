@@ -6,6 +6,10 @@ let data = [
   },
 ];
 
+let edit_index = null;
+let buttonSubmit = document.getElementById("btn-submit");
+
+console.log(buttonSubmit);
 let formData = document.getElementById("personal-form");
 formData.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -17,11 +21,17 @@ formData.addEventListener("submit", function (event) {
   let enteredAge = inputAge.value;
   let enteredAddress = inputAddress.value;
 
-  data.push({
-    name: enteredName,
-    age: enteredAge,
-    address: enteredAddress,
-  });
+  if (edit_index !== null) {
+    data.splice(edit_index, 1);
+    data.push({
+      name: enteredName,
+      age: enteredAge,
+      address: enteredAddress,
+    });
+    edit_index = null;
+    buttonSubmit.innerText = "Submit";
+  }
+
   displayData();
 });
 
@@ -36,7 +46,7 @@ function displayData() {
         <p><strong>Address:</strong>${element.address}</p>
       
         <div class="btn-container">
-          <button class="btn btn-primary">Edit</button>
+          <button class="btn btn-primary" "onClick='EditInfo(${index})'>Edit</button>
           <button class="btn btn-danger"onClick='deleteInfo(${index})'>Delete</button>
         </div>
       </div>`;
@@ -48,4 +58,11 @@ displayData();
 function deleteInfo(index) {
   data.splice(index, 1);
   displayData();
+}
+
+function editInfo(index) {
+  edit_index = index;
+  inputName.value = data[index].name;
+  inputAge.value = data[index].age;
+  inputAddress.value = data[index].address;
 }

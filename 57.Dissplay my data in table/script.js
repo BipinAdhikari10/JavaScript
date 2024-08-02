@@ -38,6 +38,10 @@ function displayData() {
             <td>${element.name}</td>
             <td>${element.age}</td>
             <td>${element.profession}</td>
+             
+              <button class="btn btn-primary">Edit</button>
+              <button class="btn btn-danger">Delete</button>
+            
           </tr>`;
   });
   tableBody.innerHTML = myData;
