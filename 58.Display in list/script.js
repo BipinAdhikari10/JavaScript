@@ -28,6 +28,8 @@ myForm.addEventListener("submit", function (event) {
     age: enteredAge,
     profession: enteredProfession,
   });
+  inputName.value = "";
+  inputAddress.value = "";
   displayData();
 });
 

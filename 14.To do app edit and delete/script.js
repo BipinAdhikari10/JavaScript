@@ -14,11 +14,13 @@ userButton.addEventListener("click", () => {
   let submitForm = {
     name: enteredName,
   };
-  if (edit_index != null) {
+  if (edit_index == null) {
+    // Edit ko case haina
+    submittedData.push(submitForm);
+  } else {
+    // Edit ko case ho
     submittedData.splice(edit_index, 1, submitForm);
     edit_index = null;
-  } else {
-    submittedData.push(submitForm);
   }
   inputTagName.value = "";
   userButton.innerText = "Add USer";
@@ -43,7 +45,7 @@ function displayTable() {
 function editInformation(index) {
   edit_index = index;
   inputTagName.value = submittedData[index].name;
-  userButton.innerText = "edit index";
+  userButton.innerText = "Edit";
 }
 function deleteInformation(index) {
   submittedData.splice(index, 1);
