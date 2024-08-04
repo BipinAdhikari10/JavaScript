@@ -50,3 +50,5 @@ function displayData() {
   tableBody.innerHTML = html;
 }
 displayData();
+
+console.log("Dom");
