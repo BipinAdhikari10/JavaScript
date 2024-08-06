@@ -26,3 +26,7 @@
 let array2 = [2, 4, 6, 8];
 let newArray1 = array2.map((value) => value * 5);
 console.log(newArray1);
+
+let array = [2, 4, 5, 6];
+let newArr = array.map((ele) => ele * 2);
+console.log(newArr);
