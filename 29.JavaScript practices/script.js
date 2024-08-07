@@ -147,18 +147,29 @@
 // let newArr = numbers.map(multiplyNumber);
 // console.log(newArr);
 
-const pairsArray = (arr) => {
-  let target = 9;
-  pairs = [];
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      if ((arr[i] = arr[j] === target)) {
-        pairs.push(arr[i]);
-      }
-    }
+// const pairsArray = (arr) => {
+//   let target = 9;
+//   pairs = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if ((arr[i] = arr[j] === target)) {
+//         pairs.push(arr[i]);
+//       }
+//     }
+//   }
+//   return pairs;
+// };
+// const numbers = [2, 7, 11, 15];
+// const resultTarget = pairsArray(numbers);
+// console.log(resultTarget);
+
+const reverseArray = (arr) => {
+  let reverse = [];
+  for (let i = 0; i <= arr.length - 1; i++) {
+    reverse.unshift(arr[i]);
   }
-  return pairs;
+  return reverse;
 };
-const numbers = [2, 7, 11, 15];
-const resultTarget = pairsArray(numbers);
-console.log(resultTarget);
+let stringArr = ["apple", "ball", "cat", "dog"];
+let reverseString = reverseArray(stringArr);
+console.log(reverseString);
