@@ -163,13 +163,26 @@
 // const resultTarget = pairsArray(numbers);
 // console.log(resultTarget);
 
+// const reverseArray = (arr) => {
+//   let reverse = [];
+//   for (let i = 0; i <= arr.length - 1; i++) {
+//     reverse.unshift(arr[i]);
+//   }
+//   return reverse;
+// };
+// let stringArr = ["apple", "ball", "cat", "dog"];
+// let reverseString = reverseArray(stringArr);
+// console.log(reverseString);
+
+// Reverse using push method
+
 const reverseArray = (arr) => {
   let reverse = [];
-  for (let i = 0; i <= arr.length - 1; i++) {
-    reverse.unshift(arr[i]);
+  for (let i = arr.length - 1; i >= 0; i--) {
+    reverse.push(arr[i]);
   }
   return reverse;
 };
-let stringArr = ["apple", "ball", "cat", "dog"];
-let reverseString = reverseArray(stringArr);
-console.log(reverseString);
+const reverseElement = ["apple", "banana", "cat"];
+let reverseArrayElement = reverseArray(reverseElement);
+console.log(reverseArrayElement);
