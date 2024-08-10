@@ -176,6 +176,17 @@
 
 // Reverse using push method
 
+// const reverseArray = (arr) => {
+//   let reverse = [];
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     reverse.push(arr[i]);
+//   }
+//   return reverse;
+// };
+// const reverseElement = ["apple", "banana", "cat"];
+// let reverseArrayElement = reverseArray(reverseElement);
+// console.log(reverseArrayElement);
+
 const reverseArray = (arr) => {
   let reverse = [];
   for (let i = arr.length - 1; i >= 0; i--) {
@@ -186,5 +197,3 @@ const reverseArray = (arr) => {
 const reverseElement = ["apple", "banana", "cat"];
 let reverseArrayElement = reverseArray(reverseElement);
 console.log(reverseArrayElement);
-
-console.log("Hello");
