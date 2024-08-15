@@ -76,3 +76,4 @@ function deleteInformation(index) {
 //   </li>
 // </ul>
 // </div>`
+console.log("Hello");
