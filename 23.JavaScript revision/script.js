@@ -190,16 +190,20 @@
 // };
 // divideNum(100);
 
-const oddSum = () => {
-  let sum = 0;
-  for (let i = 1; i <= 100; i++) {
-    if (i % 2 !== 0) {
-      sum = sum + i;
-    }
-  }
-  console.log(sum);
-};
-oddSum();
+// const oddSum = () => {
+//   let sum = 0;
+//   for (let i = 1; i <= 100; i++) {
+//     if (i % 2 !== 0) {
+//       sum = sum + i;
+//     }
+//   }
+//   console.log(sum);
+// };
+// oddSum();
 
-console.log("Hello World");
-console.log("Hello");
+// console.log("Hello World");
+// console.log("Hello");
+
+for (let i = 1; i <= 10; i++) {
+  console.log("Hello world");
+}
