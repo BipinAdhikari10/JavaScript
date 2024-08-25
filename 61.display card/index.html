@@ -14,7 +14,17 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <h2 style="text-align: center">Form data</h2>
+    <h2
+      class="container"
+      style="
+        font-weight: 700;
+        font-size: 25px;
+        font-family: sans-serif;
+        margin-top: 20px;
+      "
+    >
+      Form data
+    </h2>
     <form class="container form-container">
       <div class="mb-3">
         <label for="name" class="form-label">Name</label>
@@ -41,6 +51,11 @@
           class="form-control"
           id="exampleInputPassword1"
         />
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone no.</label>
+        <input type="number" class="form-control" id="phone" />
       </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>
