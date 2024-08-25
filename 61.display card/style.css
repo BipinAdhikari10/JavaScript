@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+input {
+  max-width: 50%;
+}
+.card-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.card {
+  margin-top: 50px;
+}
