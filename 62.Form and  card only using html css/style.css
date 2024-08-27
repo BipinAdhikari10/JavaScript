@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.form-container {
+  /* border: 2px solid red; */
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  max-width: 60%;
+}
+label {
+  font-weight: 600;
+  font-size: 18px;
+}
+input {
+  border-radius: 10px;
+}
+.card-container {
+  margin-top: 50px;
+}
+.card-text {
+  font-weight: 600;
+  margin-top: 10px;
+  color: green;
+}
