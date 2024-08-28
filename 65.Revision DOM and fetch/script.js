@@ -2,6 +2,7 @@ let form = document.getElementById("form-data");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   let inputELement = document.getElementById("limit");
+
   let enteredValue = inputELement.value;
 
   getData(enteredValue);
