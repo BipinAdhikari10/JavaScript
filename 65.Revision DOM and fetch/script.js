@@ -3,26 +3,15 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   let inputELement = document.getElementById("limit");
   let enteredValue = inputELement.value;
-  console.log(enteredValue);
-  let url = `https://fakestoreapi.com/products?limit=${enteredValue}`;
-  fetch(url)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (json) {
-      displayData(json);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
 
+  getData(enteredValue);
   inputELement.value = "";
 });
 
 getData();
 
-function getData() {
-  let url = `https://fakestoreapi.com/products`;
+function getData(limitValue) {
+  let url = `https://fakestoreapi.com/products?limit=${limitValue}`;
   fetch(url)
     .then(function (response) {
       return response.json();
