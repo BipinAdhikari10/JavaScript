@@ -1,7 +1,7 @@
 let registrationForm = document.getElementById("registrationForm");
 let tableBody = document.getElementById("table-body");
 
-// let submittedData = [];
+let submittedData = [];
 
 registrationForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -15,7 +15,7 @@ registrationForm.addEventListener("submit", (event) => {
     password: document.getElementById("password").value,
     zip: document.getElementById("zip").value,
   };
-  // submittedData.push(formData);
+  submittedData.push(formData);
 
   addDataToTable(formData);
 });

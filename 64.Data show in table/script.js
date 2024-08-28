@@ -1,3 +1,64 @@
-let formData = document.getElementById("registrationForm");
+// let registrationForm = document.getElementById("registrationForm");
+// let tableBody = document.getElementById("table-body");
+
+// let submittedData = [];
+// registrationForm.addEventListener("submit", (event) => {
+//   event.preventDefault();
+
+//   let formData = {};
+//   formData = {
+//     name: document.getElementById("name").value,
+//     address: document.getElementById("address").value,
+//     phone: document.getElementById("number").value,
+//     email: document.getElementById("email").value,
+//     password: document.getElementById("password").value,
+//     zip: document.getElementById("zip").value,
+//   };
+//   submittedData.push(formData);
+
+//   displayData(formData);
+// });
+
+// function displayData(formData) {
+//   let tr = document.createElement("tr");
+//   for (let key in formData) {
+//     let td = document.createElement("td");
+//     let text = document.createTextNode(formData[key]);
+//     td.appendChild(text);
+//     tr.appendChild(td);
+//   }
+//   tableBody.appendChild(tr);
+// }
+let registrationForm = document.getElementById("registrationForm");
 let tableBody = document.getElementById("table-body");
-console.log(tableBody);
+tableBody = "";
+let submittedData = [];
+
+registrationForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let formData = {};
+
+  formData = {
+    name: document.getElementById("name").value,
+    address: document.getElementById("address").value,
+    phone: document.getElementById("phone").value,
+    email: document.getElementById("email").value,
+    password: document.getElementById("password").value,
+    zip: document.getElementById("zip").value,
+  };
+  submittedData.push(formData);
+
+  addDataToTable(formData);
+});
+
+function addDataToTable(formData) {
+  console.log(formData);
+  let tr = document.createElement("tr");
+  for (let key in formData) {
+    td = document.createElement("td");
+    let text = document.createTextNode(formData[key]);
+    td.appendChild(text);
+    tr.appendChild(td);
+  }
+  tableBody.appendChild(tr);
+}
