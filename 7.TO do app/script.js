@@ -47,7 +47,7 @@ function editInformation(index) {
 }
 
 function deleteInformation(index) {
-  submittedData.splice(index, 2);
+  submittedData.splice(index, 1);
 
   displayTable();
 }
