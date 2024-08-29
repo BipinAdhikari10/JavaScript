@@ -32,7 +32,7 @@ function getData(limitValue) {
 function displayData(data) {
   let cardData = document.getElementById("card-container");
   let html = "";
-  data.forEach(function (element, index) {
+  data.forEach(function (element) {
     html += `   <div id="card" style="width: 18rem">
       <img
         src="${element.image}"
@@ -60,7 +60,7 @@ function displayData(data) {
         </ul>
         <div class="mt-2 d-flex justify-content-center" style="gap: 40px">
           <button class="btn btn-primary">Edit</button>
-          <button class="btn btn-danger" deleteInfo('')>Delete</button>
+          <button class="btn btn-danger">Delete</button>
         </div>
       </div>
     </div>`;
