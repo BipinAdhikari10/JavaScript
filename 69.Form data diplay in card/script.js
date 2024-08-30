@@ -70,12 +70,12 @@ function displayCard() {
 function editInfo(index) {
   // console.log("Edit index", index);
   edit_index = index;
-  imageElement = submittedData[index].name;
-  nameElement = submittedData[index].name;
-  addressElement = submittedData[index].address;
-  phoneElement = submittedData[index].address;
-  emailElement = submittedData[index].email;
-  passwordElement = submittedData[index].password;
+  imageElement.value = submittedData[index].name;
+  nameElement.value = submittedData[index].name;
+  addressElement.value = submittedData[index].address;
+  phoneElement.value = submittedData[index].address;
+  emailElement.value = submittedData[index].email;
+  passwordElement.value = submittedData[index].password;
 
   btnSubmit.innerText = "Edit data";
 }
