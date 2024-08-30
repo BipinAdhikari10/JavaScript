@@ -15,7 +15,6 @@ userBtn.addEventListener("click", () => {
   submittedData.push(formData);
   inputTagName.value = "";
 
-  console.log(submittedData);
   displayInformation();
 });
 
@@ -27,11 +26,18 @@ function displayInformation() {
     <td>${index + 1}</td>
     <td>${user.name}</td>
     <td>
-      <i class="btn text-white fa fa-edit btn-info mx-2"></i>
-      <i class="btn btn-danger text-white fa fa-trash"></i>
+      <i class="btn text-white fa fa-edit btn-info mx-2"onClick='editInfo(${index})'></i>
+      <i class="btn btn-danger text-white fa fa-trash"onClick='deleteInfo(${index})'></i>
     </td>
   </tr>
     `;
   });
   tableBody.innerHTML = html;
+}
+
+
+
+function deleteInfo(index) {
+  submittedData.splice(index, 1);
+  displayInformation();
 }
