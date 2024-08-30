@@ -31,14 +31,14 @@ formData.addEventListener("submit", (event) => {
 
   submitBtn.innerText = "Submit";
 
-  displayTable();
-
   nameElement.value = "";
   addressElement.value = "";
   phoneElement.value = "";
   emailElement.value = "";
   passwordElement.value = "";
   zipElement.value = "";
+
+  displayTable();
 });
 
 function displayTable() {

@@ -8,7 +8,7 @@ let emailElement = document.getElementById("email");
 let passwordElement = document.getElementById("password");
 let btnSubmit = document.getElementById("btn-submit");
 
-// cardData.innerHTML = "";
+cardData.innerHTML = "";
 
 let submittedData = [];
 let edit_index = null;
@@ -26,9 +26,11 @@ formData.addEventListener("submit", (event) => {
   if (edit_index == null) {
     submittedData.push(formData);
   } else {
-    submittedData.splice(index, 1, formData);
+    submittedData.splice(edit_index, 1, formData);
     edit_index = null;
   }
+
+  btnSubmit.innerText = "Submit";
 
   imageElement.value = "";
   nameElement.value = "";
@@ -36,6 +38,7 @@ formData.addEventListener("submit", (event) => {
   phoneElement.value = "";
   emailElement.value = "";
   passwordElement.value = "";
+
   displayCard();
 });
 
@@ -44,7 +47,7 @@ function displayCard() {
   submittedData.forEach(function (ele, index) {
     html += `  <div class="card" id="card" style="width: 16rem">
       <img
-        src="https://images.unsplash.com/photo-1531496730074-83b638c0a7ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHN0dWRlbnRzfGVufDB8fDB8fHww"
+        src="${ele.image}"
         class="card-img-top"
         alt="..."
       />
@@ -67,7 +70,13 @@ function displayCard() {
 function editInfo(index) {
   // console.log("Edit index", index);
   edit_index = index;
+  imageElement = submittedData[index].name;
   nameElement = submittedData[index].name;
+  addressElement = submittedData[index].address;
+  phoneElement = submittedData[index].address;
+  emailElement = submittedData[index].email;
+  passwordElement = submittedData[index].password;
+
   btnSubmit.innerText = "Edit data";
 }
 function deleteInfo(index) {
