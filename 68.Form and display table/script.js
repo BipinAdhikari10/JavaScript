@@ -1,6 +1,5 @@
 let formData = document.getElementById("registrationForm");
 let submitBtn = document.getElementById("btn-submit");
-console.log(submitBtn.innerText);
 let tableBody = document.getElementById("table-body");
 let nameElement = document.getElementById("name");
 let addressElement = document.getElementById("address");
@@ -26,7 +25,6 @@ formData.addEventListener("submit", (event) => {
   if (edit_index == null) {
     submittedData.push(formData);
   } else {
-    // submittedData.splice(edit_index, 1, formData);
     submittedData.splice(edit_index, 1, formData);
     edit_index = null;
   }
