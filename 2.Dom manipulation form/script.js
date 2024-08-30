@@ -21,7 +21,6 @@ registrationForm.addEventListener("submit", (event) => {
 });
 
 function addDataToTable(formData) {
-  console.log(formData);
   let tr = document.createElement("tr");
   for (let key in formData) {
     td = document.createElement("td");

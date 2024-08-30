@@ -29,6 +29,7 @@ function displayInformation() {
         <i class="btn text-white fa fa-edit btn-info mx-2"></i>
         <i class="btn btn-danger text-white fa fa-trash"></i>
       </td>
+      
     </tr>`;
   });
 
