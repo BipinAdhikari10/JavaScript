@@ -2,7 +2,7 @@ let formData = document.getElementById("form-data");
 let cardData = document.getElementById("card-data");
 let textArea = document.getElementById("text-area");
 let addBtn = document.getElementById("addBtn");
-console.log(addBtn);
+let inputNote = document.getElementById("search-notes");
 
 cardData.innerHTML = "";
 let submittedData = [];
@@ -17,12 +17,29 @@ formData.addEventListener("submit", (event) => {
   if (edit_index == null) {
     submittedData.push(cardObject);
   } else {
-    submittedData.splice(index, 1, cardData);
+    submittedData.splice(index, 1, cardObject);
     edit_index = null;
   }
   addBtn.innerText = "Add Note";
   textArea.value = "";
   displayCard();
+});
+
+let search = document.getElementById("search-btn");
+
+search.addEventListener("input", (event) => {
+  event.preventDefault();
+  let cardElement = document.getElementById("card-body");
+  let cardElementKoValue = cardElement.value;
+
+  Array.from(cardElement).forEach(function (element) {
+    let paraText = document.getElementsByTagName("p")[0].innerText;
+    if (paraText.includes(cardElementKoValue)) {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  });
 });
 
 function displayCard() {

@@ -45,9 +45,14 @@
               class="form-control me-2"
               type="search"
               placeholder="Search a notes"
+              id="search-notes"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
+            <button
+              class="btn btn-outline-success"
+              type="submit"
+              id="search-btn"
+            >
               Search
             </button>
           </form>
@@ -70,7 +75,7 @@
     <h2 class="container mt-4">Your notes</h2>
     <div class="card-data container mt-4" id="card-data">
       <div class="card" style="width: 18rem">
-        <div class="card-body">
+        <div class="card-body" id="card-body">
           <h5 class="card-title">Note:1</h5>
 
           <p class="card-text">JavaScript is fun</p>
