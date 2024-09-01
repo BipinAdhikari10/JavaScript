@@ -11,13 +11,13 @@ let edit_index = null;
 formData.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  cardObject = {
+  let cardObject = {
     text: textArea.value,
   };
   if (edit_index == null) {
     submittedData.push(cardObject);
   } else {
-    submittedData.splice(index, 1, cardObject);
+    submittedData.splice(edit_index, 1, cardObject);
     edit_index = null;
   }
   addBtn.innerText = "Add Note";
@@ -25,16 +25,20 @@ formData.addEventListener("submit", (event) => {
   displayCard();
 });
 
-let search = document.getElementById("search-btn");
+let searchNotes = document.getElementById("search-notes");
 
-search.addEventListener("input", (event) => {
-  event.preventDefault();
-  let cardElement = document.getElementById("card-body");
-  let cardElementKoValue = cardElement.value;
+searchNotes.addEventListener("input", () => {
+  let searchValue = searchNotes.value.toLowerCase();
 
-  Array.from(cardElement).forEach(function (element) {
-    let paraText = document.getElementsByTagName("p")[0].innerText;
-    if (paraText.includes(cardElementKoValue)) {
+  let cardElements = document.getElementsByClassName("card");
+
+  Array.from(cardElements).forEach(function (element) {
+    console.log("Element here", element);
+    let paraText = element.querySelector("p").innerText.toLowerCase();
+    console.log("paraElement", element.querySelector("p"));
+    console.log("para text", paraText);
+
+    if (paraText.includes(searchValue)) {
       element.style.display = "block";
     } else {
       element.style.display = "none";
@@ -52,7 +56,7 @@ function displayCard() {
           <p class="card-text">${element.text}</p>
           <div class="btn btn-container">
             <button class="btn btn-primary" onClick='editInformation(${index})'>Edit</button>
-            <button class="btn btn-danger"onClick='deleteInformation(${index})'>Danger</button>
+            <button class="btn btn-danger"onClick='deleteInformation(${index})'>Delete</button>
           </div>
         </div>
       </div>`;
@@ -62,8 +66,10 @@ function displayCard() {
 
 function editInformation(index) {
   textArea.value = submittedData[index].text;
+  edit_index = index;
   addBtn.innerText = "Edit Note";
 }
+
 function deleteInformation(index) {
   submittedData.splice(index, 1);
   displayCard();
