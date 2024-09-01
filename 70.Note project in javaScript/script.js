@@ -33,10 +33,10 @@ searchNotes.addEventListener("input", () => {
   let cardElements = document.getElementsByClassName("card");
 
   Array.from(cardElements).forEach(function (element) {
-    console.log("Element here", element);
+    // console.log("Element here", element);
     let paraText = element.querySelector("p").innerText.toLowerCase();
-    console.log("paraElement", element.querySelector("p"));
-    console.log("para text", paraText);
+    // console.log("paraElement", element.querySelector("p"));
+    // console.log("para text", paraText);
 
     if (paraText.includes(searchValue)) {
       element.style.display = "block";
