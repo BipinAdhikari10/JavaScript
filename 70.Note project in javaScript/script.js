@@ -2,7 +2,7 @@ let formData = document.getElementById("form-data");
 let cardData = document.getElementById("card-data");
 let textArea = document.getElementById("text-area");
 let addBtn = document.getElementById("addBtn");
-
+let titleInput = document.getElementById("title-input");
 cardData.innerHTML = "";
 let submittedData = [];
 let edit_index = null;
@@ -12,6 +12,7 @@ formData.addEventListener("submit", (event) => {
 
   let cardObject = {
     text: textArea.value,
+    title: titleInput.value,
   };
   if (edit_index == null) {
     submittedData.push(cardObject);
@@ -21,6 +22,7 @@ formData.addEventListener("submit", (event) => {
   }
   addBtn.innerText = "Add Note";
   textArea.value = "";
+  titleInput.value = "";
   displayCard();
 });
 
@@ -47,7 +49,9 @@ function displayCard() {
   submittedData.forEach(function (element, index) {
     html += ` <div class="card" style="width: 18rem">
         <div class="card-body">
-          <h5 class="card-title">Note:${index + 1}</h5>
+         
+          <h5 class="card-title">${element.title}</h5>
+         
 
           <p class="card-text">${element.text}</p>
           <div class="btn btn-container">
